@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="CrawlerContentHistoryMapper">
+
+  <cache />
+  <resultMap id="crawlerHistoryResultMap" type="CrawlerHistory">
+     <result property="historyId" column="history_id" />
+     <result property="contentId" column="content_id" />
+     <result property="ruleId" column="rule_id" />
+     <result property="url" column="url" />
+     <result property="title" column="title" />
+     <result property="description" column="description" />
+     <result property="date" column="date" />
+   </resultMap>
+  
+  <select id="getCrawlerHistoryList" parameterType="CrawlerHistoryCriteria" resultMap="crawlerHistoryResultMap">
+    SELECT   
+          h.history_id,
+     	  h.content_id,
+          h.rule_id,
+          h.url,
+          h.title,
+          h.description,
+          h.date
+    FROM 
+          crawler_history h
+    WHERE 1 = 1
+        <if test="ruleId != null and ruleId != '' ">  
+	        AND h.rule_id = #{ruleId}  
+	    </if>
+	    <if test="contentId != null and contentId != '' ">  
+	        AND h.content_id = #{contentId}  
+	    </if>
+	    <if test="url != null and url != '' ">  
+	        AND h.url = #{url}  
+	    </if>
+	    <if test="title != null and title != '' ">  
+	        AND h.title = #{title}  
+	    </if>
+  	ORDER BY 
+          h.history_id DESC
+   </select>
+   <select id="getCrawlerHistoryList_COUNT" parameterType="CrawlerHistoryCriteria" resultType="java.lang.Integer">
+    SELECT count(*)
+    FROM 
+          crawler_history h
+    WHERE 1 = 1
+        <if test="ruleId != null and ruleId != '' ">  
+	        AND h.rule_id = #{ruleId}  
+	    </if>
+	    <if test="contentId != null and contentId != '' ">  
+	        AND h.content_id = #{contentId}  
+	    </if>
+	    <if test="url != null and url != '' ">  
+	        AND h.url = #{url}  
+	    </if>
+	    <if test="title != null and title != '' ">  
+	        AND h.title = #{title}  
+	    </if>
+  	ORDER BY 
+          h.history_id DESC
+   </select>
+   
+   <select id="getCrawlerHistoryById" parameterType="CrawlerHistoryCriteria" resultMap="crawlerHistoryResultMap">
+    SELECT   
+          h.history_id,
+     	  h.content_id,
+          h.rule_id,
+          h.url,
+          h.title,
+          h.description,
+          h.date
+    FROM 
+          crawler_history h
+  	WHERE
+          h.history_id = #{historyId}
+   </select>
+   
+  <insert id="insertCrawlerHistory" parameterType="CrawlerHistory" keyProperty="historyId">
+    <selectKey keyProperty="historyId" resultType="int" order="AFTER">
+	  SELECT seq
+	        FROM sqlite_sequence
+	        WHERE (name = 'crawler_history')
+	  </selectKey>
+    INSERT INTO crawler_history
+      (content_id,rule_id,url,title,description,date)
+    VALUES
+      (#{contentId},#{ruleId},#{url},#{title},#{description},#{date})
+  </insert>
+  
+  <update id="updateCrawlerHistory" parameterType="CrawlerHistory">
+    UPDATE crawler_history 
+           <trim prefix="SET" suffixOverrides=",">  
+           		<if test="ruleId != null and ruleId != '' ">  
+		            rule_id = #{ruleId}, 
+		        </if> 
+		        <if test="contentId != null and contentId != '' ">  
+		            content_id = #{contentId}, 
+		        </if> 
+		        <if test="url != null and url != '' ">  
+		            url = #{url}
+		        </if> 
+		        <if test="title != null and title != '' ">  
+		            title = #{title}
+		        </if> 
+		        <if test="description != null and description != '' ">  
+		            description = #{description}
+		        </if> 
+		        <if test="date != null and date != '' ">  
+		            date = #{date}
+		        </if> 
+		   </trim>
+    WHERE history_id = #{historyId}
+  </update>
+  <delete id="deleteCrawlerHistoryByRuleId" parameterType="CrawlerHistory">
+     DELETE FROM crawler_history  WHERE rule_id = #{ruleId}
+  </delete>
+  <delete id="deleteCrawlerHistoryByContentId" parameterType="CrawlerHistory">
+     DELETE FROM crawler_history  WHERE content_id = #{contentId}
+  </delete>
+  <delete id="deleteCrawlerHistoryById" parameterType="CrawlerHistory">
+     DELETE FROM crawler_history  WHERE history_id IN
+     <foreach  collection="historyIdList" item="historyIdList" separator="," open="(" close=")">
+    	#{historyIdList}
+    </foreach>
+  </delete>
+  
+</mapper>
