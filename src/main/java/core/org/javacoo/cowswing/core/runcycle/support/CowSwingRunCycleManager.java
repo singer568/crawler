@@ -164,32 +164,6 @@ public class CowSwingRunCycleManager implements ICowSwingRunCycle{
 		states.add(ScheduleEnum.SHUTDOWN);
 	    executeSchedule(states);
 	}
-	 /**
-     * 执行计划
-     * <p>方法说明:</>
-     * <li></li>
-     * @author DuanYong
-     * @since 2013-10-16 下午6:09:29
-     * @version 1.0
-     * @exception
-     */
-	private void executeSchedule(){
-		for (Iterator<Enum<ScheduleEnum>> iterator = scheduleTreeMap.keySet().iterator(); iterator.hasNext();) {
-            //取得运行计划
-			Schedule schedule = scheduleTreeMap.get(iterator.next());
-            try {
-            	if(null != schedule){
-            		 //执行当前运行计划
-	            	schedule.execute();
-            	}
-            } catch (Exception ex) {
-            	ex.printStackTrace();
-                //this.exceptionProcessor.handleException(phase, ex);
-            }
-            //将当前阶段赋予全局变量
-            currentSchedule = schedule;
-        }
-	}
 	/* (non-Javadoc)
 	 * @see org.javacoo.cowswing.core.run.ICowRunCycle#getCurrentRunSchedule()
 	 */
