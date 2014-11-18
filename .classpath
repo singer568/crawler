@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src/main/java/persist"/>
-	<classpathentry kind="src" path="src/main/java/webservice"/>
-	<classpathentry kind="src" path="src/main/java/crawler"/>
-	<classpathentry kind="src" path="src/main/java/core"/>
-	<classpathentry kind="src" path="src/main/java/plugin"/>
-	<classpathentry kind="src" path="src/main/java/ui"/>
-	<classpathentry kind="src" path="src/main/java/base"/>
 	<classpathentry kind="src" path="src/main/resource"/>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
