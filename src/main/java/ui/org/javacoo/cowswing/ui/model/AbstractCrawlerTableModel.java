@@ -1,5 +1,6 @@
 package org.javacoo.cowswing.ui.model;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -40,7 +41,11 @@ public abstract class AbstractCrawlerTableModel<T> extends AbstractTableModel{
 		return this.dataList;
 	}
 	public void setData(List<T> entityList) {
-		dataList = entityList;
+		if (entityList == null) {
+			dataList = new ArrayList<T>();
+		} else {
+			dataList = entityList;
+		}
 		this.fireTableDataChanged();
 	}
     

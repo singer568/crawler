@@ -53,11 +53,6 @@
    </select>
    
    <insert id="insertCrawlerDataBase" parameterType="CrawlerDataBase" keyProperty="dataBaseId">
-    <selectKey keyProperty="dataBaseId" resultType="int" order="AFTER">
-	  SELECT seq
-	        FROM sqlite_sequence
-	        WHERE (name = 'crawler_database')
-	  </selectKey>
     INSERT INTO crawler_database
       (description, url, user_name,password,class_name,type)
     VALUES

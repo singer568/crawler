@@ -60,7 +60,7 @@ public class MsgListPanel  extends AbstractBaseListPage implements ListSelection
 	 */
 	private JTable msgTable;
 	
-    private ManagerService service = (ManagerService)CowSwingContextData.getInstance().getContextDataByKey(Constant.CONTEXT_DATA_KEY_WEBSERVICE);
+//    private ManagerService service = (ManagerService)CowSwingContextData.getInstance().getContextDataByKey(Constant.CONTEXT_DATA_KEY_WEBSERVICE);
 	
     @Override
 	protected JComponent getTopPane() {
@@ -160,15 +160,15 @@ public class MsgListPanel  extends AbstractBaseListPage implements ListSelection
 		showData(0,Constant.PAGE_LIMIT);
 	}
 	public List<MsgBean> getData(int startIndex,int pageSize) {
-		MsgBean msgBean = new MsgBean();
-		Object userObj = CowSwingContextData.getInstance().getContextDataByKey(Constant.CONTEXT_DATA_KEY_USERANME);
-		if(null != userObj){
-			UserBean userBean = (UserBean)userObj;
-			msgBean.setUserId(userBean.getId());
-			msgBean.setUserName(userBean.getUsername());
-		}
+//		MsgBean msgBean = new MsgBean();
+//		Object userObj = CowSwingContextData.getInstance().getContextDataByKey(Constant.CONTEXT_DATA_KEY_USERANME);
+//		if(null != userObj){
+//			UserBean userBean = (UserBean)userObj;
+//			msgBean.setUserId(userBean.getId());
+//			msgBean.setUserName(userBean.getUsername());
+//		}
 		try{
-			PaginationBean<MsgBean> paginationBean = service.getMsgList(msgBean);
+			PaginationBean<MsgBean> paginationBean = new PaginationBean<MsgBean>();
 			PaginationSupport<MsgBean> resultList = new PaginationSupport(paginationBean.getList(),paginationBean.getTotalCount(),paginationBean.getPageNo(),paginationBean.getPageSize());
 			paginationBar.setPaginationSupport(resultList);
 			paginationBar.setListPage(this);

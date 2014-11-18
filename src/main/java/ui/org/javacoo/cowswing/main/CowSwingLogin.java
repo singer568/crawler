@@ -25,7 +25,6 @@ import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileOutputStream;
-import java.net.InetAddress;
 import java.nio.channels.FileLock;
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +36,6 @@ import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
@@ -48,18 +46,12 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.javacoo.cowswing.base.constant.Constant;
 import org.javacoo.cowswing.base.utils.FileUtils;
-import org.javacoo.cowswing.base.utils.HttpProxySetUtil;
 import org.javacoo.cowswing.base.utils.ImageManager;
 import org.javacoo.cowswing.core.cache.UserCacheManager;
-import org.javacoo.cowswing.core.context.CowSwingContextData;
 import org.javacoo.cowswing.core.runcycle.ICowSwingRunCycle;
 import org.javacoo.cowswing.core.runcycle.support.CowSwingRunCycleManager;
 import org.javacoo.cowswing.ui.style.LookAndFeelSelector;
 import org.javacoo.cowswing.ui.widget.JFilterTextField;
-import org.javacoo.cowswing.ui.widget.UrlLabel;
-import org.javacoo.webservice.manager.ManagerService;
-import org.javacoo.webservice.manager.beans.UserBean;
-import org.javacoo.webservice.util.WebServiceUtil;
 import org.springframework.util.CollectionUtils;
 
 import com.sun.awt.AWTUtilities;
@@ -92,7 +84,7 @@ public class CowSwingLogin extends JFrame {
 	private JPanel inputPane;
 	private JPanel topPane;
 	private JLabel errorLabel;
-	private JLabel netSetLabel;
+//	private JLabel netSetLabel;
 	private JLabel exitLabel;
 	private JFilterTextField userNameTextField;
 	private JTextField passwordTextField;
@@ -114,7 +106,7 @@ public class CowSwingLogin extends JFrame {
 		initStyle(inputPane);
 		registerListener();
 		initPosition();
-		CowSwingContextData.getInstance().setContextData(Constant.CONTEXT_DATA_KEY_WEBSERVICE, WebServiceUtil.getInstance().getWsCtx().getBean("managerClient"));
+//		CowSwingContextData.getInstance().setContextData(Constant.CONTEXT_DATA_KEY_WEBSERVICE, WebServiceUtil.getInstance().getWsCtx().getBean("managerClient"));
 	}
 
 	private void initPosition() {
@@ -222,17 +214,17 @@ public class CowSwingLogin extends JFrame {
 		rememberMe = new JCheckBox("记住我");
 		rememberMe.setOpaque(false);
 		inputPane.add(rememberMe);
-		netSetLabel = createInputLabel("网络设置");
-		netSetLabel.setCursor(new Cursor(Cursor.HAND_CURSOR));
-		inputPane.add(netSetLabel);
-		JLabel regLabel = new UrlLabel("注册新账号", "http://www.javacoo.com/register.jspx");
-		JLabel forgetPasswordLabel = new UrlLabel("忘记密码", "http://www.javacoo.com/member/forgot_password.jspx");
+//		netSetLabel = createInputLabel("网络设置");
+//		netSetLabel.setCursor(new Cursor(Cursor.HAND_CURSOR));
+//		inputPane.add(netSetLabel);
+//		JLabel regLabel = new UrlLabel("注册新账号", "http://www.javacoo.com/register.jspx");
+//		JLabel forgetPasswordLabel = new UrlLabel("忘记密码", "http://www.javacoo.com/member/forgot_password.jspx");
 		exitLabel = createInputLabel("退出");
 		exitLabel.setCursor(new Cursor(Cursor.HAND_CURSOR));
 		JPanel panel = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 1));
 		panel.setOpaque(false);
-		panel.add(regLabel);
-		panel.add(forgetPasswordLabel);
+//		panel.add(regLabel);
+//		panel.add(forgetPasswordLabel);
 		panel.add(exitLabel);
 		inputPane.add(panel);
 		errorLabel = createInputLabel("");
@@ -324,12 +316,12 @@ public class CowSwingLogin extends JFrame {
 				}
 			}
 		});
-		netSetLabel.addMouseListener(new MouseAdapter(){
-			public void mouseClicked(MouseEvent e) {
-				NetProxySettingDialog.getInstance().init(ui, Constant.OPTION_TYPE_ADD, "网络代理设置");
-				NetProxySettingDialog.getInstance().setVisible(true);
-			}
-		});
+//		netSetLabel.addMouseListener(new MouseAdapter(){
+//			public void mouseClicked(MouseEvent e) {
+//				NetProxySettingDialog.getInstance().init(ui, Constant.OPTION_TYPE_ADD, "网络代理设置");
+//				NetProxySettingDialog.getInstance().setVisible(true);
+//			}
+//		});
 		exitLabel.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e) {
 				ui.dispose();
@@ -337,17 +329,20 @@ public class CowSwingLogin extends JFrame {
 		});
 	}
 	private boolean login(){
+		return true;
+		/*
 		String errorMsg = "";
         try {
-        	if(Boolean.valueOf(userCacheManager.getValue(Constant.NET_PROXY_SETTING_ISUSED))){
-        		HttpProxySetUtil.setHttpProxy(userCacheManager.getValue(Constant.NET_PROXY_SETTING_HOST), userCacheManager.getValue(Constant.NET_PROXY_SETTING_PORT), userCacheManager.getValue(Constant.NET_PROXY_SETTING_DOMAIN), userCacheManager.getValue(Constant.NET_PROXY_SETTING_USERNAME), userCacheManager.getValue(Constant.NET_PROXY_SETTING_PASSWORD));
-        	}
+//        	if(Boolean.valueOf(userCacheManager.getValue(Constant.NET_PROXY_SETTING_ISUSED))){
+//        		HttpProxySetUtil.setHttpProxy(userCacheManager.getValue(Constant.NET_PROXY_SETTING_HOST), userCacheManager.getValue(Constant.NET_PROXY_SETTING_PORT), userCacheManager.getValue(Constant.NET_PROXY_SETTING_DOMAIN), userCacheManager.getValue(Constant.NET_PROXY_SETTING_USERNAME), userCacheManager.getValue(Constant.NET_PROXY_SETTING_PASSWORD));
+//        	}
         	UserBean userBean = new UserBean();
             userBean.setUsername(userNameTextField.getText());
             userBean.setPassword(passwordTextField.getText());
 			userBean.setLastLoginIp(InetAddress.getLocalHost().getHostAddress());
-			ManagerService service = (ManagerService)CowSwingContextData.getInstance().getContextDataByKey(Constant.CONTEXT_DATA_KEY_WEBSERVICE);
-			userBean = service.login(userBean);
+			userBean.setIsLoginSuccess(Boolean.TRUE);
+//			ManagerService service = (ManagerService)CowSwingContextData.getInstance().getContextDataByKey(Constant.CONTEXT_DATA_KEY_WEBSERVICE);
+//			userBean = service.login(userBean);
 			if(userBean.getIsLoginSuccess()){
 				CowSwingContextData.getInstance().setContextData(Constant.CONTEXT_DATA_KEY_USERANME, userBean);
 				if(rememberMe.isSelected()){
@@ -370,6 +365,7 @@ public class CowSwingLogin extends JFrame {
 		}finally{
 			errorLabel.setText(errorMsg);
 		}
+		*/
 	}
 	/**
 	 * 取得属性文件中柜员号信息
