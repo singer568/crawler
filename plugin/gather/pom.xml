@@ -6,6 +6,7 @@
 		<artifactId>plugin</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
+	<groupId>com.bjm.pms.plugin</groupId>
 	<artifactId>gather</artifactId>
 	<packaging>jar</packaging>
 

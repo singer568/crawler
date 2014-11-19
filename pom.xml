@@ -16,6 +16,10 @@
 		<module>crawler</module>
 		<module>login</module>
 		<module>webservice</module>
+		<module>plugin/core</module>
+		<module>plugin/gather</module>
+		<module>plugin/scheduler</module>
+		<module>plugin/tool</module>
 	</modules>
 
 	<dependencyManagement>
