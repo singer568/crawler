@@ -8,10 +8,9 @@
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../modules/parent/</relativePath>
 	</parent>
-	<groupId>com.bjm.pms.crawler.plugins</groupId>
-	<artifactId>plugins-gather</artifactId>
-	<name>Crawler :: Plugins :: Gather</name>
+	<artifactId>crawler-view</artifactId>
 	<packaging>jar</packaging>
+	<name>Crawler :: Modules :: View</name>
 	<dependencies>
 		<!-- apache jars start -->
 		<dependency>
@@ -268,10 +267,14 @@
 			<artifactId>jfreechart</artifactId>
 		</dependency>
 
+
+
 		<dependency>
 			<groupId>net.sf.squirrel-sql.thirdparty-non-maven</groupId>
 			<artifactId>substance</artifactId>
 		</dependency>
+
+
 
 		<dependency>
 			<groupId>wues</groupId>
@@ -291,13 +294,15 @@
 			<artifactId>jnotify</artifactId>
 		</dependency>
 
-		
 		<dependency>
-			<groupId>com.bjm.pms.crawler.plugins</groupId>
-			<artifactId>plugins-core</artifactId>
+			<groupId>com.bjm.pms.crawler</groupId>
+			<artifactId>crawler-persist</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		
+		<dependency>
+			<groupId>com.bjm.pms.crawler</groupId>
+			<artifactId>crawler-core</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
-
 </project>

@@ -14,9 +14,8 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>core</module>
+		<module>base</module>
 		<module>gather</module>
 		<module>scheduler</module>
-		<module>tool</module>
 	</modules>
 </project>
