@@ -12,11 +12,11 @@
          http://cxf.apache.org/jaxws  
          http://cxf.apache.org/schemas/jaxws.xsd"> 
     
-    <bean id="managerClient" class="org.javacoo.webservice.manager.ManagerService" factory-bean="managerClientFactory"  
+    <bean id="managerClient" class="com.bjm.pms.crawler.webservice.manager.ManagerService" factory-bean="managerClientFactory"  
         factory-method="create" />  
           
     <bean id="managerClientFactory" class="org.apache.cxf.jaxws.JaxWsProxyFactoryBean">  
-        <property name="serviceClass" value="org.javacoo.webservice.manager.ManagerService" />  
+        <property name="serviceClass" value="com.bjm.pms.crawler.webservice.manager.ManagerService" />  
       <property name="address" value="http://www.javacoo.com/webservice/ManagerService" /> 
        <!--<property name="address" value="http://localhost/webservice/ManagerService" />  -->  
     </bean> 

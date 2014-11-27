@@ -28,7 +28,7 @@
      http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
      http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd"
      default-lazy-init="false">
-    <context:component-scan base-package="org.javacoo.cowswing" />
+    <context:component-scan base-package="com.bjm.pms.crawler" />
      <!-- 允许 autowire -->
     <context:annotation-config />
     <!--开启注解事务 -->
@@ -61,8 +61,8 @@
         <property name="dataSource" ref="dataSource" />
     </bean>
     <aop:config>
-        <aop:pointcut id="txServiceMethods" expression="execution(* org.javacoo.cowswing.base.service..*(..))" />
-        <aop:pointcut id="txPluginServiceMethods" expression="execution(* org.javacoo.cowswing.plugin.service..*(..))" />
+        <aop:pointcut id="txServiceMethods" expression="execution(* com.bjm.pms.crawler.view.base.service..*(..))" />
+        <aop:pointcut id="txPluginServiceMethods" expression="execution(* com.bjm.pms.crawler.plugin.core.service..*(..))" />
         
         <aop:advisor advice-ref="txAdvice" pointcut-ref="txServiceMethods" />
         <aop:advisor advice-ref="txAdvice" pointcut-ref="txPluginServiceMethods" />
@@ -89,11 +89,11 @@
         </property>
     </bean>
     <!-- MyBatis持久服务类 -->
-    <bean id="myBatisPersistence" class="org.javacoo.persistence.mybatis.MyBatisPersistenceImpl">
+    <bean id="myBatisPersistence" class="com.bjm.pms.crawler.persist.mybatis.MyBatisPersistenceImpl">
 	  <property name="sqlSessionFactory" ref="sqlSessionFactory" />
 	</bean>
 	<!-- 持久服务类 -->
-	<bean id="persistService" class="org.javacoo.persistence.PersistServiceDelegate">
+	<bean id="persistService" class="com.bjm.pms.crawler.persist.PersistServiceDelegate">
 		<property name="myBatisPersistence" ref="myBatisPersistence" />
 	</bean>
 

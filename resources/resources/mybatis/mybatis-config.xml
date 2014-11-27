@@ -2,28 +2,28 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">  
 <configuration>  
     <typeAliases>  
-        <typeAlias alias="CrawlerRule" type="org.javacoo.cowswing.plugin.gather.domain.CrawlerRule"/>
-        <typeAlias alias="CrawlerRuleCriteria" type="org.javacoo.cowswing.plugin.gather.service.beans.CrawlerRuleCriteria"/>  
-        <typeAlias alias="CrawlerTask" type="org.javacoo.cowswing.plugin.gather.domain.CrawlerTask"/>  
-        <typeAlias alias="CrawlerTaskCriteria" type="org.javacoo.cowswing.plugin.gather.service.beans.CrawlerTaskCriteria"/>  
-        <typeAlias alias="CrawlerContent" type="org.javacoo.cowswing.plugin.gather.domain.CrawlerContent"/>
-        <typeAlias alias="CrawlerContentCriteria" type="org.javacoo.cowswing.plugin.gather.service.beans.CrawlerContentCriteria"/> 
-        <typeAlias alias="CrawlerContentComment" type="org.javacoo.cowswing.plugin.gather.domain.CrawlerContentComment"/>
-        <typeAlias alias="CrawlerContentCommentCriteria" type="org.javacoo.cowswing.plugin.gather.service.beans.CrawlerContentCommentCriteria"/> 
-        <typeAlias alias="CrawlerHistory" type="org.javacoo.cowswing.plugin.gather.domain.CrawlerHistory"/>
-        <typeAlias alias="CrawlerHistoryCriteria" type="org.javacoo.cowswing.plugin.gather.service.beans.CrawlerHistoryCriteria"/>
-        <typeAlias alias="CrawlerContentPagination" type="org.javacoo.cowswing.plugin.gather.domain.CrawlerContentPagination"/>
-        <typeAlias alias="CrawlerContentPaginationCriteria" type="org.javacoo.cowswing.plugin.gather.service.beans.CrawlerContentPaginationCriteria"/>
-        <typeAlias alias="CrawlerContentResource" type="org.javacoo.cowswing.plugin.gather.domain.CrawlerContentResource"/>
-        <typeAlias alias="CrawlerContentResourceCriteria" type="org.javacoo.cowswing.plugin.gather.service.beans.CrawlerContentResourceCriteria"/>
-        <typeAlias alias="CrawlerDataBase" type="org.javacoo.cowswing.plugin.gather.domain.CrawlerDataBase"/>
-        <typeAlias alias="CrawlerDataBaseCriteria" type="org.javacoo.cowswing.plugin.gather.service.beans.CrawlerDataBaseCriteria"/>
-        <typeAlias alias="CrawlerExtendField" type="org.javacoo.cowswing.plugin.gather.domain.CrawlerExtendField"/>
-        <typeAlias alias="CrawlerExtendFieldCriteria" type="org.javacoo.cowswing.plugin.gather.service.beans.CrawlerExtendFieldCriteria"/>
-        <typeAlias alias="CrawlerConfig" type="org.javacoo.cowswing.plugin.core.domain.CrawlerConfig"/>
-        <typeAlias alias="CrawlerConfigCriteria" type="org.javacoo.cowswing.plugin.core.service.beans.CrawlerConfigCriteria"/>
-        <typeAlias alias="Scheduler" type="org.javacoo.cowswing.plugin.scheduler.domain.Scheduler"/>
-        <typeAlias alias="SchedulerCriteria" type="org.javacoo.cowswing.plugin.scheduler.service.beans.SchedulerCriteria"/>
+        <typeAlias alias="CrawlerRule" type="com.bjm.pms.crawler.plugin.gather.domain.CrawlerRule"/>
+        <typeAlias alias="CrawlerRuleCriteria" type="com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerRuleCriteria"/>  
+        <typeAlias alias="CrawlerTask" type="com.bjm.pms.crawler.plugin.gather.domain.CrawlerTask"/>  
+        <typeAlias alias="CrawlerTaskCriteria" type="com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerTaskCriteria"/>  
+        <typeAlias alias="CrawlerContent" type="com.bjm.pms.crawler.plugin.gather.domain.CrawlerContent"/>
+        <typeAlias alias="CrawlerContentCriteria" type="com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerContentCriteria"/> 
+        <typeAlias alias="CrawlerContentComment" type="com.bjm.pms.crawler.plugin.gather.domain.CrawlerContentComment"/>
+        <typeAlias alias="CrawlerContentCommentCriteria" type="com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerContentCommentCriteria"/> 
+        <typeAlias alias="CrawlerHistory" type="com.bjm.pms.crawler.plugin.gather.domain.CrawlerHistory"/>
+        <typeAlias alias="CrawlerHistoryCriteria" type="com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerHistoryCriteria"/>
+        <typeAlias alias="CrawlerContentPagination" type="com.bjm.pms.crawler.plugin.gather.domain.CrawlerContentPagination"/>
+        <typeAlias alias="CrawlerContentPaginationCriteria" type="com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerContentPaginationCriteria"/>
+        <typeAlias alias="CrawlerContentResource" type="com.bjm.pms.crawler.plugin.gather.domain.CrawlerContentResource"/>
+        <typeAlias alias="CrawlerContentResourceCriteria" type="com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerContentResourceCriteria"/>
+        <typeAlias alias="CrawlerDataBase" type="com.bjm.pms.crawler.plugin.gather.domain.CrawlerDataBase"/>
+        <typeAlias alias="CrawlerDataBaseCriteria" type="com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerDataBaseCriteria"/>
+        <typeAlias alias="CrawlerExtendField" type="com.bjm.pms.crawler.plugin.gather.domain.CrawlerExtendField"/>
+        <typeAlias alias="CrawlerExtendFieldCriteria" type="com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerExtendFieldCriteria"/>
+        <typeAlias alias="CrawlerConfig" type="com.bjm.pms.crawler.core.config.CrawlerConfig"/>
+        <typeAlias alias="CrawlerConfigCriteria" type="com.bjm.pms.crawler.plugin.core.service.beans.CrawlerConfigCriteria"/>
+        <typeAlias alias="Scheduler" type="com.bjm.pms.crawler.plugin.scheduler.domain.Scheduler"/>
+        <typeAlias alias="SchedulerCriteria" type="com.bjm.pms.crawler.plugin.scheduler.service.beans.SchedulerCriteria"/>
     </typeAliases>  
     <mappers>  
         <mapper resource="resources/mybatis/gather/CrawlerRuleMapper.xml" />  

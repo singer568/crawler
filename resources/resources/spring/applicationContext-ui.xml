@@ -29,77 +29,77 @@
      http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
   
   <!--  <context:component-scan base-package="org.javacoo.crawler.ui" />-->
-  <context:component-scan base-package="org.javacoo.cowswing" />
+  <context:component-scan base-package="com.bjm.pms.crawler" />
  <!-- 允许 autowire -->
   <context:annotation-config />
-  <bean id="cowSwingMainFrame" class="org.javacoo.cowswing.main.CowSwingMainFrame" >
+  <bean id="cowSwingMainFrame" class="com.bjm.pms.crawler.view.main.CowSwingMainFrame" >
   </bean>
   
-  <bean id="curtainCardPerspective" class="org.javacoo.cowswing.ui.view.card.CurtainCardPerspective">
+  <bean id="curtainCardPerspective" class="com.bjm.pms.crawler.view.ui.view.card.CurtainCardPerspective">
   	<constructor-arg index="0" ref="pageContainer"/>
 	<constructor-arg index="1" ref="navigator"/>
   </bean>
   
   <!-- 以下可以配置为扫描 -->
   
-  <bean id="viewDialog" class="org.javacoo.cowswing.ui.view.dialog.ViewDialog">
+  <bean id="viewDialog" class="com.bjm.pms.crawler.view.ui.view.dialog.ViewDialog">
   </bean>
-  <bean id="appMenuBar" class="org.javacoo.cowswing.ui.view.bar.AppMenuBar">
+  <bean id="appMenuBar" class=" com.bjm.pms.crawler.view.ui.view.bar.AppMenuBar">
   </bean>
-  <bean id="appToolBar" class="org.javacoo.cowswing.ui.view.bar.AppToolBar">
+  <bean id="appToolBar" class=" com.bjm.pms.crawler.view.ui.view.bar.AppToolBar">
   </bean>
-  <bean id="navigator" class="org.javacoo.cowswing.ui.view.navigator.Navigator">
+  <bean id="navigator" class="com.bjm.pms.crawler.view.ui.view.navigator.Navigator">
   </bean>
-  <bean id="pageContainer" class="org.javacoo.cowswing.ui.view.panel.PageContainer">
+  <bean id="pageContainer" class="com.bjm.pms.crawler.view.ui.view.panel.PageContainer">
   </bean>
-  <bean id="viewDeatilPanel" class="org.javacoo.cowswing.ui.view.panel.ViewDeatilPanel" scope="prototype">
+  <bean id="viewDeatilPanel" class="com.bjm.pms.crawler.view.ui.view.panel.ViewDeatilPanel" scope="prototype">
   </bean>
-  <bean id="viewImagePanel" class="org.javacoo.cowswing.ui.view.panel.ViewImagePanel" scope="prototype">
+  <bean id="viewImagePanel" class="com.bjm.pms.crawler.view.ui.view.panel.ViewImagePanel" scope="prototype">
   </bean>
-  <bean id="paginationBar" class="org.javacoo.cowswing.ui.util.PaginationBar" scope="prototype">
+  <bean id="paginationBar" class="com.bjm.pms.crawler.view.ui.util.PaginationBar" scope="prototype">
   </bean>
-  <bean id="systemTabPanel" class="org.javacoo.cowswing.ui.view.panel.SystemTabPanel" >
-  </bean>
-  
-  <bean id="advertisementPanel" class="org.javacoo.cowswing.plugin.core.ui.view.panel.AdvertisementPanel" >
-  </bean>
-  <bean id="systemInfoPanel" class="org.javacoo.cowswing.plugin.core.ui.view.panel.SystemInfoPanel" >
-  </bean>
-  <bean id="systemMemoryMonitorPanel" class="org.javacoo.cowswing.plugin.core.ui.view.panel.SystemMemoryMonitorPanel" >
-  </bean>
-  <bean id="systemConfigSettingPanel" class="org.javacoo.cowswing.plugin.core.ui.view.panel.SystemConfigSettingPanel" >
+  <bean id="systemTabPanel" class="com.bjm.pms.crawler.view.ui.view.panel.SystemTabPanel" >
   </bean>
   
-  <bean id="aboutAction" class="org.javacoo.cowswing.plugin.core.ui.action.AboutAction" >
+  <bean id="advertisementPanel" class="com.bjm.pms.crawler.view.plugin.core.ui.view.panel.AdvertisementPanel" >
   </bean>
-  <bean id="exitAction" class="org.javacoo.cowswing.plugin.core.ui.action.ExitAction" >
+  <bean id="systemInfoPanel" class="com.bjm.pms.crawler.plugin.core.ui.view.panel.SystemInfoPanel" >
   </bean>
-  <bean id="helpAction" class="org.javacoo.cowswing.plugin.core.ui.action.HelpAction" >
+  <bean id="systemMemoryMonitorPanel" class="com.bjm.pms.crawler.plugin.core.ui.view.panel.SystemMemoryMonitorPanel" >
   </bean>
-  <bean id="welcomeAction" class="org.javacoo.cowswing.plugin.core.ui.action.WelcomeAction" >
+  <bean id="systemConfigSettingPanel" class="com.bjm.pms.crawler.plugin.core.ui.view.panel.SystemConfigSettingPanel" >
   </bean>
-  <bean id="showSystemTabPanelAction" class="org.javacoo.cowswing.plugin.core.ui.action.ShowSystemTabPanelAction" >
+  
+  <bean id="aboutAction" class="com.bjm.pms.crawler.plugin.core.ui.action.AboutAction" >
   </bean>
-  <bean id="showSystemConfigSettingAction" class="org.javacoo.cowswing.plugin.core.ui.action.ShowSystemConfigSettingAction" >
+  <bean id="exitAction" class="com.bjm.pms.crawler.plugin.core.ui.action.ExitAction" >
+  </bean>
+  <bean id="helpAction" class="com.bjm.pms.crawler.plugin.core.ui.action.HelpAction" >
+  </bean>
+  <bean id="welcomeAction" class="com.bjm.pms.crawler.plugin.core.ui.action.WelcomeAction" >
+  </bean>
+  <bean id="showSystemTabPanelAction" class="com.bjm.pms.crawler.plugin.core.ui.action.ShowSystemTabPanelAction" >
+  </bean>
+  <bean id="showSystemConfigSettingAction" class="com.bjm.pms.crawler.plugin.core.ui.action.ShowSystemConfigSettingAction" >
   </bean>
   
   
-  <bean id="core" class="org.javacoo.cowswing.plugin.core.ui.Core" >
+  <bean id="core" class="com.bjm.pms.crawler.plugin.core.ui.Core" >
   </bean>
   
-  <bean id="cowSwingCacheManager" class="org.javacoo.cowswing.core.cache.support.CowSwingCacheManager" >
+  <bean id="cowSwingCacheManager" class="com.bjm.pms.crawler.view.core.cache.support.CowSwingCacheManager" >
   </bean>
-  <bean id="coreCache" class="org.javacoo.cowswing.plugin.core.service.cache.CoreCache" >
+  <bean id="coreCache" class="com.bjm.pms.crawler.plugin.core.service.cache.CoreCache" >
   </bean>
-  <bean id="applicationStartScheduleProcessor" class="org.javacoo.cowswing.ui.processor.ApplicationStartScheduleProcessor" >
+  <bean id="applicationStartScheduleProcessor" class="com.bjm.pms.crawler.view.ui.processor.ApplicationStartScheduleProcessor" >
   </bean>
-  <bean id="cacheScheduleProcessor" class="org.javacoo.cowswing.core.runcycle.schedule.processor.support.CacheScheduleProcessor" >
+  <bean id="cacheScheduleProcessor" class="com.bjm.pms.crawler.view.core.runcycle.schedule.processor.support.CacheScheduleProcessor" >
   </bean>
-  <bean id="startSchedule" class="org.javacoo.cowswing.core.runcycle.schedule.support.StartSchedule" >
+  <bean id="startSchedule" class="com.bjm.pms.crawler.view.core.runcycle.schedule.support.StartSchedule" >
   </bean>
-  <bean id="runSchedule" class="org.javacoo.cowswing.core.runcycle.schedule.support.RunSchedule" >
+  <bean id="runSchedule" class="com.bjm.pms.crawler.view.core.runcycle.schedule.support.RunSchedule" >
   </bean>
-  <bean id="shutDownSchedule" class="org.javacoo.cowswing.core.runcycle.schedule.support.ShutDownSchedule" >
+  <bean id="shutDownSchedule" class="com.bjm.pms.crawler.view.core.runcycle.schedule.support.ShutDownSchedule" >
   </bean>
   
   

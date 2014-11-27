@@ -31,31 +31,31 @@
   
   <!--  <context:component-scan base-package="org.javacoo.crawler.plugin.tool.ui" />-->
   
-  <bean id="imageListPanel" class="org.javacoo.cowswing.plugin.tool.ui.view.panel.ImageListPanel" >
+  <bean id="imageListPanel" class="com.bjm.pms.crawler.plugin.tool.ui.view.panel.ImageListPanel" >
   </bean>
-  <bean id="imageSettingPanel" class="org.javacoo.cowswing.plugin.tool.ui.view.panel.ImageSettingPanel">
+  <bean id="imageSettingPanel" class="com.bjm.pms.crawler.plugin.tool.ui.view.panel.ImageSettingPanel">
   </bean>
   
   <!-- 以下可以配置为扫描 -->
-  <bean id="addImageAction" class="org.javacoo.cowswing.plugin.tool.ui.action.AddImageAction" >
+  <bean id="addImageAction" class="com.bjm.pms.crawler.plugin.tool.ui.action.AddImageAction" >
   </bean>
-  <bean id="addImageDirAction" class="org.javacoo.cowswing.plugin.tool.ui.action.AddImageDirAction" >
+  <bean id="addImageDirAction" class="com.bjm.pms.crawler.plugin.tool.ui.action.AddImageDirAction" >
   </bean>
-  <bean id="dealWithImageAction" class="org.javacoo.cowswing.plugin.tool.ui.action.DealWithImageAction" >
+  <bean id="dealWithImageAction" class="com.bjm.pms.crawler.plugin.tool.ui.action.DealWithImageAction" >
   </bean>
-  <bean id="deleteAllImageAction" class="org.javacoo.cowswing.plugin.tool.ui.action.DeleteAllImageAction" >
+  <bean id="deleteAllImageAction" class="com.bjm.pms.crawler.plugin.tool.ui.action.DeleteAllImageAction" >
   </bean>
-  <bean id="deleteImageAction" class="org.javacoo.cowswing.plugin.tool.ui.action.DeleteImageAction" >
+  <bean id="deleteImageAction" class="com.bjm.pms.crawler.plugin.tool.ui.action.DeleteImageAction" >
   </bean>
-  <bean id="imageToolAction" class="org.javacoo.cowswing.plugin.tool.ui.action.ImageToolAction" >
+  <bean id="imageToolAction" class="com.bjm.pms.crawler.plugin.tool.ui.action.ImageToolAction" >
   </bean>
-  <bean id="showImageListAction" class="org.javacoo.cowswing.plugin.tool.ui.action.ShowImageListAction" >
+  <bean id="showImageListAction" class="com.bjm.pms.crawler.plugin.tool.ui.action.ShowImageListAction" >
   </bean>
-  <bean id="showImageSettingAction" class="org.javacoo.cowswing.plugin.tool.ui.action.ShowImageSettingAction" >
+  <bean id="showImageSettingAction" class="com.bjm.pms.crawler.plugin.tool.ui.action.ShowImageSettingAction" >
   </bean>
-  <bean id="imageSettingBean" class="org.javacoo.cowswing.plugin.tool.ui.bean.ImageSettingBean" >
+  <bean id="imageSettingBean" class="com.bjm.pms.crawler.plugin.tool.ui.bean.ImageSettingBean" >
   </bean>
-  <bean id="image" class="org.javacoo.cowswing.plugin.tool.ui.Image" >
+  <bean id="image" class="com.bjm.pms.crawler.plugin.tool.ui.Image" >
   </bean>
   
 </beans>

@@ -31,39 +31,39 @@
   
   <!--  <context:component-scan base-package="org.javacoo.cowswing.plugin.system.ui" />-->
   
-  <bean id="schedulerListPage" class="org.javacoo.cowswing.plugin.scheduler.ui.view.panel.SchedulerListPage">
+  <bean id="schedulerListPage" class="com.bjm.pms.crawler.plugin.scheduler.ui.view.panel.SchedulerListPage">
   </bean>
-  <bean id="schedulerSettingDialog" class="org.javacoo.cowswing.plugin.scheduler.ui.view.dialog.SchedulerSettingDialog">
+  <bean id="schedulerSettingDialog" class="com.bjm.pms.crawler.plugin.scheduler.ui.view.dialog.SchedulerSettingDialog">
   </bean>
   
   <!-- 以下可以配置为扫描 -->
   
-  <bean id="addSchedulerAction" class="org.javacoo.cowswing.plugin.scheduler.ui.action.AddSchedulerAction" >
+  <bean id="addSchedulerAction" class="com.bjm.pms.crawler.plugin.scheduler.ui.action.AddSchedulerAction" >
   </bean>
-  <bean id="deleteSchedulerAction" class="org.javacoo.cowswing.plugin.scheduler.ui.action.DeleteSchedulerAction" >
+  <bean id="deleteSchedulerAction" class="com.bjm.pms.crawler.plugin.scheduler.ui.action.DeleteSchedulerAction" >
   </bean>
-  <bean id="showSchedulerListAction" class="org.javacoo.cowswing.plugin.scheduler.ui.action.ShowSchedulerListAction" >
+  <bean id="showSchedulerListAction" class="com.bjm.pms.crawler.plugin.scheduler.ui.action.ShowSchedulerListAction" >
   </bean>
-  <bean id="updateSchedulerAction" class="org.javacoo.cowswing.plugin.scheduler.ui.action.UpdateSchedulerAction" >
+  <bean id="updateSchedulerAction" class="com.bjm.pms.crawler.plugin.scheduler.ui.action.UpdateSchedulerAction" >
   </bean>
-  <bean id="executeSchedulerAction" class="org.javacoo.cowswing.plugin.scheduler.ui.action.ExecuteSchedulerAction" >
+  <bean id="executeSchedulerAction" class="com.bjm.pms.crawler.plugin.scheduler.ui.action.ExecuteSchedulerAction" >
   </bean>
-  <bean id="stopSchedulerAction" class="org.javacoo.cowswing.plugin.scheduler.ui.action.StopSchedulerAction" >
-  </bean>
-  
-  <bean id="schedulerSettingPanel" class="org.javacoo.cowswing.plugin.scheduler.ui.view.panel.SchedulerSettingPanel" >
+  <bean id="stopSchedulerAction" class="com.bjm.pms.crawler.plugin.scheduler.ui.action.StopSchedulerAction" >
   </bean>
   
-  <bean id="crawlerSchedulerService" class="org.javacoo.cowswing.plugin.scheduler.service.CrawlerSchedulerServiceImpl" >
+  <bean id="schedulerSettingPanel" class="com.bjm.pms.crawler.plugin.scheduler.ui.view.panel.SchedulerSettingPanel" >
   </bean>
   
-  <bean id="schedulerRuleSvc" class="org.javacoo.cowswing.plugin.scheduler.core.support.SchedulerRuleSvcImpl" >
+  <bean id="crawlerSchedulerService" class="com.bjm.pms.crawler.plugin.scheduler.service.CrawlerSchedulerServiceImpl" >
   </bean>
   
-  <bean id="schedulerTaskManageSvc" class="org.javacoo.cowswing.plugin.scheduler.core.support.SchedulerTaskManageSvcImpl" >
+  <bean id="schedulerRuleSvc" class="com.bjm.pms.crawler.plugin.scheduler.core.support.SchedulerRuleSvcImpl" >
   </bean>
   
-  <bean id="scheduler" class="org.javacoo.cowswing.plugin.scheduler.ui.Scheduler" >
+  <bean id="schedulerTaskManageSvc" class="com.bjm.pms.crawler.plugin.scheduler.core.support.SchedulerTaskManageSvcImpl" >
+  </bean>
+  
+  <bean id="scheduler" class="com.bjm.pms.crawler.plugin.scheduler.ui.Scheduler" >
   </bean>
   
 </beans>
