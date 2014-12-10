@@ -292,8 +292,8 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.bjm.pms.crawler.plugins</groupId>
-			<artifactId>plugins-gather</artifactId>
+			<groupId>com.bjm.pms.crawler</groupId>
+			<artifactId>crawler-view</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>

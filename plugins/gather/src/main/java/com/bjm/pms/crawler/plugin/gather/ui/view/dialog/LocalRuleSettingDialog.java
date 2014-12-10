@@ -11,16 +11,16 @@ import javax.swing.JTable;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Component;
 
-import com.bjm.pms.crawler.plugin.gather.constant.GatherConstant;
-import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerRuleBean;
 import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerRuleCriteria;
 import com.bjm.pms.crawler.plugin.gather.ui.model.CrawlerRuleTabelModel;
 import com.bjm.pms.crawler.plugin.gather.ui.view.panel.LocalRuleListPage;
 import com.bjm.pms.crawler.plugin.gather.ui.view.panel.rule.LocalRuleBaseSettingPanel;
 import com.bjm.pms.crawler.plugin.gather.ui.view.panel.rule.LocalRuleDataBaseSettingPanel;
 import com.bjm.pms.crawler.view.base.constant.Constant;
+import com.bjm.pms.crawler.view.base.constant.GatherConstant;
 import com.bjm.pms.crawler.view.base.loader.LanguageLoader;
 import com.bjm.pms.crawler.view.base.service.ICrawlerService;
+import com.bjm.pms.crawler.view.base.service.beans.CrawlerRuleBean;
 import com.bjm.pms.crawler.view.core.event.CowSwingEvent;
 import com.bjm.pms.crawler.view.core.event.CowSwingEventType;
 import com.bjm.pms.crawler.view.core.event.CowSwingListener;

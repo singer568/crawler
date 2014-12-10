@@ -8,8 +8,8 @@ import javax.swing.JScrollPane;
 
 import org.springframework.stereotype.Component;
 
-import com.bjm.pms.crawler.plugin.gather.service.beans.RuleContentPageBean;
 import com.bjm.pms.crawler.view.base.loader.LanguageLoader;
+import com.bjm.pms.crawler.view.base.service.beans.RuleContentPageBean;
 import com.bjm.pms.crawler.view.ui.view.panel.AbstractContentPanel;
 /**
  * 内容分页属性采集规则设置

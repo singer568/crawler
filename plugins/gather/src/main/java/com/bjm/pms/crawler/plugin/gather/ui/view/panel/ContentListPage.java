@@ -16,7 +16,6 @@ import javax.swing.event.ListSelectionListener;
 import org.springframework.stereotype.Component;
 
 import com.bjm.pms.crawler.persist.PaginationSupport;
-import com.bjm.pms.crawler.plugin.gather.constant.GatherConstant;
 import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerContentBean;
 import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerContentCommentBean;
 import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerContentCommentCriteria;
@@ -31,6 +30,7 @@ import com.bjm.pms.crawler.plugin.gather.ui.action.DeleteContentAction;
 import com.bjm.pms.crawler.plugin.gather.ui.action.ViewContentAction;
 import com.bjm.pms.crawler.plugin.gather.ui.model.CrawlerContentTabelModel;
 import com.bjm.pms.crawler.plugin.gather.ui.view.dialog.ContentDialog;
+import com.bjm.pms.crawler.view.base.constant.GatherConstant;
 import com.bjm.pms.crawler.view.base.loader.LanguageLoader;
 import com.bjm.pms.crawler.view.base.service.ICrawlerService;
 import com.bjm.pms.crawler.view.core.event.CowSwingEvent;

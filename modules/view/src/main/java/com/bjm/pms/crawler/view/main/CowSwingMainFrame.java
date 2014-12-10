@@ -19,6 +19,7 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -33,6 +34,7 @@ import javax.swing.JPanel;
 
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
+import org.apache.cxf.binding.corba.wsdl.Array;
 import org.apache.log4j.Logger;
 import org.jdesktop.swingx.JXStatusBar;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -134,6 +136,14 @@ public class CowSwingMainFrame extends MainFrame implements Runnable,CowSwingLis
 	 * @return void
 	 */
 	private void initPlugin(){
+		List<UiPlugin> plugins = new ArrayList<UiPlugin>();
+		for (UiPlugin plugin : uiPlugins) {
+			if (null != plugin && plugin.getPluginLevel() >= 0) {
+				plugins.add(plugin);
+			}
+		}
+		uiPlugins = plugins;
+
 		if(CollectionUtils.isNotEmpty(uiPlugins)){
 			Collections.sort(uiPlugins);
 			boolean hasSetDefault = false;

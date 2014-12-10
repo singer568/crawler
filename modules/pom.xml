@@ -17,5 +17,6 @@
 		<module>view</module>
 		<module>core</module>
 		<module>persist</module>
+		<module>resource</module>
 	</modules>
 </project>

@@ -15,13 +15,13 @@ import org.springframework.stereotype.Component;
 
 import com.bjm.pms.crawler.plugin.core.beans.CrawlerDiyDataConfigBean;
 import com.bjm.pms.crawler.plugin.core.service.beans.CrawlerConfigBean;
-import com.bjm.pms.crawler.plugin.gather.constant.GatherConstant;
 import com.bjm.pms.crawler.plugin.gather.constant.SystemConstant;
 import com.bjm.pms.crawler.plugin.gather.ui.model.CrawlerConfigDiyDataTableModel;
 import com.bjm.pms.crawler.plugin.gather.ui.view.panel.DiyDataListPage;
 import com.bjm.pms.crawler.plugin.gather.ui.view.panel.DiyDataMapSettingPanel;
 import com.bjm.pms.crawler.plugin.gather.ui.view.panel.DiyDataSettingPanel;
 import com.bjm.pms.crawler.view.base.constant.Constant;
+import com.bjm.pms.crawler.view.base.constant.GatherConstant;
 import com.bjm.pms.crawler.view.base.loader.LanguageLoader;
 import com.bjm.pms.crawler.view.core.event.CowSwingEvent;
 import com.bjm.pms.crawler.view.core.event.CowSwingEventType;

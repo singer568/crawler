@@ -8,10 +8,10 @@ import java.util.Date;
 
 import org.apache.log4j.Logger;
 
-import com.bjm.pms.crawler.plugin.gather.constant.GatherConstant;
 import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerTaskBean;
 import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerTaskCriteria;
 import com.bjm.pms.crawler.view.base.constant.Constant;
+import com.bjm.pms.crawler.view.base.constant.GatherConstant;
 import com.bjm.pms.crawler.view.base.loader.LanguageLoader;
 import com.bjm.pms.crawler.view.base.service.ICrawlerService;
 import com.bjm.pms.crawler.view.base.utils.DateUtil;

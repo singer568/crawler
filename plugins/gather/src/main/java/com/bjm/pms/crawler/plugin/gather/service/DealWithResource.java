@@ -8,17 +8,17 @@ import java.util.List;
 
 import org.apache.commons.collections.CollectionUtils;
 
-import com.bjm.pms.crawler.plugin.gather.constant.GatherConstant;
 import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerContentResourceBean;
 import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerContentResourceCriteria;
-import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerRuleBean;
 import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerRuleCriteria;
 import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerTaskBean;
 import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerTaskCriteria;
 import com.bjm.pms.crawler.plugin.tool.ui.DealWithImage;
 import com.bjm.pms.crawler.view.base.constant.Constant;
+import com.bjm.pms.crawler.view.base.constant.GatherConstant;
 import com.bjm.pms.crawler.view.base.loader.LanguageLoader;
 import com.bjm.pms.crawler.view.base.service.ICrawlerService;
+import com.bjm.pms.crawler.view.base.service.beans.CrawlerRuleBean;
 import com.bjm.pms.crawler.view.core.event.CowSwingEventType;
 
 /**

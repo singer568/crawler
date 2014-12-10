@@ -19,10 +19,10 @@ import javax.swing.JSplitPane;
 import org.apache.commons.collections.CollectionUtils;
 
 import com.bjm.pms.crawler.core.CrawlerService;
-import com.bjm.pms.crawler.plugin.gather.constant.GatherConstant;
 import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerTaskBean;
 import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerTaskCriteria;
 import com.bjm.pms.crawler.view.base.constant.Constant;
+import com.bjm.pms.crawler.view.base.constant.GatherConstant;
 import com.bjm.pms.crawler.view.base.service.ICrawlerService;
 import com.bjm.pms.crawler.view.core.event.CowSwingEventType;
 import com.bjm.pms.crawler.view.ui.view.panel.AbstractTabPanel;

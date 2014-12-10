@@ -14,7 +14,6 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>base</module>
 		<module>gather</module>
 		<module>scheduler</module>
 	</modules>

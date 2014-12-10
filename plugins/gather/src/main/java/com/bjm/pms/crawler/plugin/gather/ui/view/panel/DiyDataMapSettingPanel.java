@@ -20,9 +20,9 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Component;
 
 import com.bjm.pms.crawler.plugin.core.beans.CrawlerDiyDataConfigBean;
-import com.bjm.pms.crawler.plugin.gather.constant.GatherConstant;
 import com.bjm.pms.crawler.plugin.gather.service.beans.SelectValueBean;
 import com.bjm.pms.crawler.plugin.gather.ui.model.CrawlerDiyDataMapFieldsTabelModel;
+import com.bjm.pms.crawler.view.base.constant.GatherConstant;
 import com.bjm.pms.crawler.view.base.loader.ImageLoader;
 import com.bjm.pms.crawler.view.base.loader.LanguageLoader;
 import com.bjm.pms.crawler.view.base.utils.JsonUtils;

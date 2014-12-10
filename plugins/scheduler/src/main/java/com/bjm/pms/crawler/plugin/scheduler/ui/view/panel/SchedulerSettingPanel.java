@@ -17,10 +17,10 @@ import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Component;
 
-import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerRuleBean;
 import com.bjm.pms.crawler.plugin.scheduler.service.beans.SchedulerBean;
 import com.bjm.pms.crawler.plugin.scheduler.ui.model.RuleComboBoxModel;
 import com.bjm.pms.crawler.view.base.loader.LanguageLoader;
+import com.bjm.pms.crawler.view.base.service.beans.CrawlerRuleBean;
 import com.bjm.pms.crawler.view.core.cache.ICowSwingCacheManager;
 import com.bjm.pms.crawler.view.core.cache.support.CacheKeyConstant;
 import com.bjm.pms.crawler.view.ui.listener.IntegerVerifier;

@@ -5,6 +5,7 @@
 package com.bjm.pms.crawler.view.ui.view.panel;
 
 import java.awt.BorderLayout;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -38,6 +39,19 @@ public class SystemTabPanel extends JPanel implements IPage {
 	private SingleRowTabbedPane tabbedPane;
     @Autowired
 	public SystemTabPanel(List<ITabPanel> tabPanelList) {
+    	List<ITabPanel> panels = new ArrayList<ITabPanel>();
+    	//去掉默认实现的ITabPanel类
+    	for(ITabPanel panel : tabPanelList) {
+    		if (null != panel.getTanPanelName()) {
+    			panels.add(panel);
+    		}
+    	}
+    	tabPanelList = panels;
+    	
+    	if (null == tabPanelList || tabPanelList.size() <= 0) {
+    		return;
+    	}
+    	//将有效的TabPanel进行处理
 		setLayout(new BorderLayout());
 		tabbedPane = new SingleRowTabbedPane(
 				SingleRowTabbedPane.FOUR_BUTTONS, SwingConstants.LEFT);

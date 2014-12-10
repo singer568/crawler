@@ -21,9 +21,6 @@ import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Component;
 
-import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerRuleBean;
-import com.bjm.pms.crawler.plugin.gather.service.beans.ExtendFieldsBean;
-import com.bjm.pms.crawler.plugin.gather.service.beans.RuleContentBean;
 import com.bjm.pms.crawler.plugin.gather.ui.model.CrawlerExtendFieldsTabelModel;
 import com.bjm.pms.crawler.plugin.gather.ui.model.CrawlerMidExtendFieldsTabelModel;
 import com.bjm.pms.crawler.plugin.gather.ui.view.dialog.RuleSettingDialog;
@@ -31,6 +28,9 @@ import com.bjm.pms.crawler.plugin.gather.ui.view.dialog.TestRuleInfoDialog;
 import com.bjm.pms.crawler.view.base.constant.Constant;
 import com.bjm.pms.crawler.view.base.loader.ImageLoader;
 import com.bjm.pms.crawler.view.base.loader.LanguageLoader;
+import com.bjm.pms.crawler.view.base.service.beans.CrawlerRuleBean;
+import com.bjm.pms.crawler.view.base.service.beans.ExtendFieldsBean;
+import com.bjm.pms.crawler.view.base.service.beans.RuleContentBean;
 import com.bjm.pms.crawler.view.ui.listener.IntegerVerifier;
 import com.bjm.pms.crawler.view.ui.view.panel.AbstractContentPanel;
 /**

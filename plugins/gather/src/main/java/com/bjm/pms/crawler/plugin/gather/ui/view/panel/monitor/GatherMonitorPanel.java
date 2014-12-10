@@ -11,7 +11,7 @@ import javax.swing.SwingUtilities;
 
 import org.springframework.stereotype.Component;
 
-import com.bjm.pms.crawler.plugin.gather.constant.GatherConstant;
+import com.bjm.pms.crawler.view.base.constant.GatherConstant;
 import com.bjm.pms.crawler.view.base.loader.LanguageLoader;
 import com.bjm.pms.crawler.view.core.event.CowSwingEvent;
 import com.bjm.pms.crawler.view.core.event.CowSwingEventType;

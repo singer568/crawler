@@ -6,7 +6,7 @@ package com.bjm.pms.crawler.plugin.gather.ui.model;
 
 import java.util.List;
 
-import com.bjm.pms.crawler.plugin.gather.service.beans.ExtendFieldsBean;
+import com.bjm.pms.crawler.view.base.service.beans.ExtendFieldsBean;
 import com.bjm.pms.crawler.view.ui.model.AbstractCrawlerTableModel;
 
 

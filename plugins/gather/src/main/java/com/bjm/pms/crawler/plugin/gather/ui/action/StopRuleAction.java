@@ -10,11 +10,11 @@ import javax.swing.JTable;
 import org.springframework.stereotype.Component;
 
 import com.bjm.pms.crawler.core.CrawlerService;
-import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerRuleBean;
 import com.bjm.pms.crawler.plugin.gather.ui.model.CrawlerRuleTabelModel;
 import com.bjm.pms.crawler.plugin.gather.ui.view.panel.RuleListPage;
 import com.bjm.pms.crawler.view.base.loader.ImageLoader;
 import com.bjm.pms.crawler.view.base.loader.LanguageLoader;
+import com.bjm.pms.crawler.view.base.service.beans.CrawlerRuleBean;
 
 /**
  * 停止执行任务

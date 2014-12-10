@@ -10,10 +10,10 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import com.bjm.pms.crawler.plugin.gather.constant.GatherConstant;
-import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerRuleBean;
 import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerRuleCriteria;
+import com.bjm.pms.crawler.view.base.constant.GatherConstant;
 import com.bjm.pms.crawler.view.base.service.ICrawlerService;
+import com.bjm.pms.crawler.view.base.service.beans.CrawlerRuleBean;
 import com.bjm.pms.crawler.view.core.cache.support.AbstractCowSwingCache;
 import com.bjm.pms.crawler.view.core.cache.support.CacheKeyConstant;
 

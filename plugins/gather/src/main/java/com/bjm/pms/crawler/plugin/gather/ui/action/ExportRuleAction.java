@@ -22,13 +22,13 @@ import org.apache.log4j.Logger;
 import org.jfree.chart.encoders.EncoderUtil;
 import org.springframework.stereotype.Component;
 
-import com.bjm.pms.crawler.plugin.gather.constant.GatherConstant;
-import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerRuleBean;
 import com.bjm.pms.crawler.plugin.gather.ui.model.CrawlerRuleTabelModel;
 import com.bjm.pms.crawler.plugin.gather.ui.view.panel.RuleListPage;
 import com.bjm.pms.crawler.view.base.constant.Constant;
+import com.bjm.pms.crawler.view.base.constant.GatherConstant;
 import com.bjm.pms.crawler.view.base.loader.ImageLoader;
 import com.bjm.pms.crawler.view.base.loader.LanguageLoader;
+import com.bjm.pms.crawler.view.base.service.beans.CrawlerRuleBean;
 import com.bjm.pms.crawler.view.base.utils.DateUtil;
 import com.bjm.pms.crawler.view.base.utils.JsonUtils;
 

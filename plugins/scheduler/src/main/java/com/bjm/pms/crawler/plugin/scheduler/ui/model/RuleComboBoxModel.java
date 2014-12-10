@@ -10,7 +10,7 @@ import java.util.List;
 import javax.swing.AbstractListModel;
 import javax.swing.ComboBoxModel;
 
-import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerRuleBean;
+import com.bjm.pms.crawler.view.base.service.beans.CrawlerRuleBean;
 
 /**
  * 采集规则下拉model

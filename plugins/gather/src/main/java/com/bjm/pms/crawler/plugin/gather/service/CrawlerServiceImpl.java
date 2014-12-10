@@ -27,7 +27,6 @@ import com.bjm.pms.crawler.core.filter.Filter;
 import com.bjm.pms.crawler.core.filter.LinkAreaFilter;
 import com.bjm.pms.crawler.core.filter.PaginationAreaFilter;
 import com.bjm.pms.crawler.core.persistent.CrawlerPersistent;
-import com.bjm.pms.crawler.plugin.gather.constant.GatherConstant;
 import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerContentBean;
 import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerContentCommentBean;
 import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerContentCommentCriteria;
@@ -38,13 +37,14 @@ import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerContentResourceBea
 import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerContentResourceCriteria;
 import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerExtendFieldBean;
 import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerExtendFieldCriteria;
-import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerRuleBean;
 import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerRuleCriteria;
 import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerTaskBean;
 import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerTaskCriteria;
-import com.bjm.pms.crawler.plugin.gather.service.beans.ExtendFieldsBean;
 import com.bjm.pms.crawler.view.base.constant.Constant;
+import com.bjm.pms.crawler.view.base.constant.GatherConstant;
 import com.bjm.pms.crawler.view.base.service.ICrawlerService;
+import com.bjm.pms.crawler.view.base.service.beans.CrawlerRuleBean;
+import com.bjm.pms.crawler.view.base.service.beans.ExtendFieldsBean;
 import com.bjm.pms.crawler.view.core.event.CowSwingEvent;
 import com.bjm.pms.crawler.view.core.event.CowSwingEventType;
 /**

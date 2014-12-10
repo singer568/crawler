@@ -22,13 +22,13 @@ import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 
 import com.bjm.pms.crawler.core.data.ContentBean;
-import com.bjm.pms.crawler.plugin.gather.constant.GatherConstant;
-import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerRuleBean;
 import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerRuleCriteria;
 import com.bjm.pms.crawler.plugin.gather.service.local.LocalDocParser;
 import com.bjm.pms.crawler.plugin.gather.service.local.LocalDocParserFactory;
 import com.bjm.pms.crawler.view.base.constant.Constant;
+import com.bjm.pms.crawler.view.base.constant.GatherConstant;
 import com.bjm.pms.crawler.view.base.service.ICrawlerService;
+import com.bjm.pms.crawler.view.base.service.beans.CrawlerRuleBean;
 import com.bjm.pms.crawler.view.core.init.InitService;
 
 /**

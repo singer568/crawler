@@ -19,8 +19,8 @@ import javax.swing.SwingUtilities;
 import org.apache.log4j.Logger;
 
 import com.bjm.pms.crawler.core.CrawlerService;
-import com.bjm.pms.crawler.plugin.gather.constant.GatherConstant;
 import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerTaskBean;
+import com.bjm.pms.crawler.view.base.constant.GatherConstant;
 import com.bjm.pms.crawler.view.base.loader.ImageLoader;
 import com.bjm.pms.crawler.view.base.loader.LanguageLoader;
 import com.bjm.pms.crawler.view.base.monitor.MonitorStateBean;

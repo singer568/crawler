@@ -11,10 +11,10 @@ import javax.swing.JTable;
 
 import org.springframework.stereotype.Component;
 
-import com.bjm.pms.crawler.plugin.gather.constant.GatherConstant;
 import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerContentResourceBean;
 import com.bjm.pms.crawler.plugin.gather.ui.model.CrawlerContentResourceTabelModel;
 import com.bjm.pms.crawler.plugin.gather.ui.view.panel.content.ContentResourceListPanel;
+import com.bjm.pms.crawler.view.base.constant.GatherConstant;
 import com.bjm.pms.crawler.view.base.loader.ImageLoader;
 import com.bjm.pms.crawler.view.base.loader.LanguageLoader;
 import com.bjm.pms.crawler.view.core.event.CowSwingEvent;

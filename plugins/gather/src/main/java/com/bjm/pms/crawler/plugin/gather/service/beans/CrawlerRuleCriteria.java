@@ -4,7 +4,12 @@ import java.util.Date;
 import java.util.List;
 
 import com.bjm.pms.crawler.persist.PaginationCriteria;
+import com.bjm.pms.crawler.plugin.core.service.beans.RuleBaseBean;
 import com.bjm.pms.crawler.view.base.constant.Constant;
+import com.bjm.pms.crawler.view.base.service.beans.RuleCommentBean;
+import com.bjm.pms.crawler.view.base.service.beans.RuleContentBean;
+import com.bjm.pms.crawler.view.base.service.beans.RuleContentPageBean;
+import com.bjm.pms.crawler.view.base.service.beans.RuleDataBaseBean;
 
 
 

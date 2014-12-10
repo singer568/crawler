@@ -17,11 +17,11 @@ import javax.swing.JTable;
 
 import org.apache.commons.collections.CollectionUtils;
 
-import com.bjm.pms.crawler.plugin.gather.service.beans.ExtendFieldsBean;
-import com.bjm.pms.crawler.plugin.gather.service.beans.RuleFieldsBean;
+import com.bjm.pms.crawler.plugin.core.service.beans.RuleFieldsBean;
 import com.bjm.pms.crawler.plugin.gather.ui.model.CrawlerExtendFieldsTabelModel;
 import com.bjm.pms.crawler.view.base.loader.ImageLoader;
 import com.bjm.pms.crawler.view.base.loader.LanguageLoader;
+import com.bjm.pms.crawler.view.base.service.beans.ExtendFieldsBean;
 import com.bjm.pms.crawler.view.ui.view.panel.AbstractContentPanel;
 /**
  * 扩展字段设置面板

@@ -1,0 +1,147 @@
+2014-12-09 18:38:10 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.core.cache.UserCacheManager开始进入userinit;
+2014-12-09 18:38:10 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.core.cache.UserCacheManager本地文件地址......D:\dev\Code\crawler\crawler\modules\view\data\users.properties
+2014-12-09 18:38:10 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.core.cache.UserCacheManager开始加载本地文件......D:\dev\Code\crawler\crawler\modules\view\data\users.properties
+2014-12-09 18:38:10 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.main.CowSwingLogin读取文件数据...
+2014-12-09 18:38:10 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.main.CowSwingLogin读取文件数据...完成
+2014-12-09 18:38:12 [INFO ] - [AWT-EventQueue-0] org.springframework.context.support.ClassPathXmlApplicationContextRefreshing org.springframework.context.support.ClassPathXmlApplicationContext@1b158db: startup date [Tue Dec 09 18:38:12 CST 2014]; root of context hierarchy
+2014-12-09 18:38:12 [INFO ] - [AWT-EventQueue-0] org.springframework.beans.factory.xml.XmlBeanDefinitionReaderLoading XML bean definitions from class path resource [resources/spring/spring-cxf-client.xml]
+2014-12-09 18:38:13 [INFO ] - [AWT-EventQueue-0] org.springframework.beans.factory.support.DefaultListableBeanFactoryPre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@98f352: defining beans [managerClient,managerClientFactory]; root of factory hierarchy
+2014-12-09 18:43:52 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.ui.style.LookAndFeelSelectorOfficeBlue2007
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.loader.ImageLoader设置本地化语言:zh_CN
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.loader.PluginsLoader开始加载系统插件配置文件:/plugins/CowSwingPlugins.properties
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.loader.PluginsLoader加载插件：Tool,插件路径为：/plugins/tool/Plugin.properties
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Name,值为：实用工具
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：BeanXmlPath,值为：
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Id,值为：Tool
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：LogoImagePath,值为：plugins/tool/images/tool.png
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Active,值为：true
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Requires,值为： 
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Version,值为：1.0
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Provider,值为：Javacoo
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.loader.PluginsLoader加载插件：Scheduler,插件路径为：/plugins/scheduler/Plugin.properties
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：BeanXmlPath,值为：
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Name,值为：定时任务
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Id,值为：Scheduler
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Active,值为：false
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：LogoImagePath,值为：plugins/scheduler/images/scheduler.png
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Requires,值为：Gather
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Version,值为：1.0
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Provider,值为：Javacoo
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.loader.PluginsLoader加载插件：Gather,插件路径为：/plugins/gather/Plugin.properties
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Name,值为：数据采集
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：BeanXmlPath,值为：
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Id,值为：Gather
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：LogoImagePath,值为：plugins/gather/images/gather.png
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Active,值为：true
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Requires,值为：Tool
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Version,值为：3.0
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Provider,值为：Javacoo
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.loader.PluginsLoader加载系统插件置文件加载完成
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.loader.ConfigLoader开始加载爬虫参数配置文件:/CowSwingApp.properties
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.loader.ConfigLoader加载配置：crawlerAppCore,路径为：/plugins/gather/GatherCore.properties
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：connection,值为：Keep-Alive
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：extractResType,值为：doc,docx,excel,txt,pdf,rar
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：replaceResName,值为：false
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：proxyServerList,值为：203.66.83.46:3128,122.225.22.22:8080,82.222.19.54:8080,59.57.15.71:80,59.172.208.187:8080,60.250.20.107:3128,82.222.49.65:8080,125.88.75.151:3128,116.236.205.100:80,119.97.146.152:80,119.97.146.150:80,59.172.208.186:8080,115.182.38.42:80,61.166.155.230:8080,219.130.39.9:3128,180.96.19.24:8080,180.96.19.25:8080,119.145.197.69:8080,121.8.209.190:3128,202.103.215.203:80,218.247.138.40:80,202.43.179.182:54321,219.159.105.180:8080,220.168.248.101:80,218.6.13.35:80,220.168.248.106:80,211.152.36.99:80,82.222.48.1:8080,218.22.80.61:3128,82.222.49.81:8080,120.35.31.101:8080,124.193.109.117:80,222.127.106.89:3128,122.226.240.233:80,219.134.240.203:80,222.184.9.242:3128,122.226.240.235:80,121.14.133.169:3128,218.94.149.114:8080,60.250.109.87:3128,60.190.77.98:3128,85.105.19.200:80,61.157.77.11:80,61.157.217.31:80,118.112.185.71:8080,121.12.250.201:3128,222.83.210.45:8080,182.99.127.29:80,59.37.163.156:3128,115.236.98.109:80
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：accept,值为：text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：acceptLanguage,值为：zh-cn,zh;q=0.5
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：threadNum,值为：
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：taskTimeOut,值为：5000
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：resSaveRootPath,值为：u/cms/www/
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：defaultCommonReplaceWords,值为：
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：defaultWords,值为：丑牛爬虫
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：acceptCharset,值为：ISO-8859-1,utf-8;q=0.7,*;q=0.7
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：extractMediaResType,值为：swf,flv
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：resSavePath,值为：
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：cacheControl,值为：no-cache
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：userAgent,值为：Mozilla/5.0 (Windows; U; Windows NT 5.1; zh-CN; rv:1.9.2.6) Gecko/20100625 Firefox/3.6.6 Greatwqs
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：keepAlive,值为：300
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.loader.ConfigLoader加载配置：crawlerAppInitConfig,路径为：/resources/config/CrawlerAppInitConfig.properties
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：frameWidth,值为：900
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：version,值为：3.12
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：welocmeMusicName,值为：calf.wav
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：frameHeight,值为：615
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：showAdvertisement,值为：false
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：showMusic,值为：true
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：advertisementPath,值为：
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：msgMusicName,值为：msg.wav
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.loader.ConfigLoader爬虫参数配置文件加载完成
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.core.runcycle.support.CowSwingRunCycleManager开始初始化Spring容器.....
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] org.springframework.context.support.ClassPathXmlApplicationContextRefreshing org.springframework.context.support.ClassPathXmlApplicationContext@caa79c: startup date [Tue Dec 09 18:43:53 CST 2014]; root of context hierarchy
+2014-12-09 18:43:53 [INFO ] - [AWT-EventQueue-0] org.springframework.beans.factory.xml.XmlBeanDefinitionReaderLoading XML bean definitions from class path resource [resources/spring/applicationContext.xml]
+2014-12-09 18:53:25 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.core.cache.UserCacheManager开始进入userinit;
+2014-12-09 18:53:25 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.core.cache.UserCacheManager本地文件地址......D:\dev\Code\crawler\crawler\modules\view\data\users.properties
+2014-12-09 18:53:25 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.core.cache.UserCacheManager开始加载本地文件......D:\dev\Code\crawler\crawler\modules\view\data\users.properties
+2014-12-09 18:53:25 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.main.CowSwingLogin读取文件数据...
+2014-12-09 18:53:25 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.main.CowSwingLogin读取文件数据...完成
+2014-12-09 18:53:25 [INFO ] - [AWT-EventQueue-0] org.springframework.context.support.ClassPathXmlApplicationContextRefreshing org.springframework.context.support.ClassPathXmlApplicationContext@40b181: startup date [Tue Dec 09 18:53:25 CST 2014]; root of context hierarchy
+2014-12-09 18:53:25 [INFO ] - [AWT-EventQueue-0] org.springframework.beans.factory.xml.XmlBeanDefinitionReaderLoading XML bean definitions from class path resource [resources/spring/spring-cxf-client.xml]
+2014-12-09 18:53:26 [INFO ] - [AWT-EventQueue-0] org.springframework.beans.factory.support.DefaultListableBeanFactoryPre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@98f352: defining beans [managerClient,managerClientFactory]; root of factory hierarchy
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.ui.style.LookAndFeelSelectorOfficeBlue2007
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.loader.ImageLoader设置本地化语言:zh_CN
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.loader.PluginsLoader开始加载系统插件配置文件:/plugins/CowSwingPlugins.properties
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.loader.PluginsLoader加载插件：Tool,插件路径为：/plugins/tool/Plugin.properties
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Name,值为：实用工具
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：BeanXmlPath,值为：
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Id,值为：Tool
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：LogoImagePath,值为：plugins/tool/images/tool.png
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Active,值为：true
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Requires,值为： 
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Version,值为：1.0
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Provider,值为：Javacoo
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.loader.PluginsLoader加载插件：Scheduler,插件路径为：/plugins/scheduler/Plugin.properties
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：BeanXmlPath,值为：
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Name,值为：定时任务
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Id,值为：Scheduler
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Active,值为：false
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：LogoImagePath,值为：plugins/scheduler/images/scheduler.png
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Requires,值为：Gather
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Version,值为：1.0
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Provider,值为：Javacoo
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.loader.PluginsLoader加载插件：Gather,插件路径为：/plugins/gather/Plugin.properties
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Name,值为：数据采集
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：BeanXmlPath,值为：
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Id,值为：Gather
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：LogoImagePath,值为：plugins/gather/images/gather.png
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Active,值为：true
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Requires,值为：Tool
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Version,值为：3.0
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：Provider,值为：Javacoo
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.loader.PluginsLoader加载系统插件置文件加载完成
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.loader.ConfigLoader开始加载爬虫参数配置文件:/CowSwingApp.properties
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.loader.ConfigLoader加载配置：crawlerAppCore,路径为：/plugins/gather/GatherCore.properties
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：connection,值为：Keep-Alive
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：extractResType,值为：doc,docx,excel,txt,pdf,rar
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：replaceResName,值为：false
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：proxyServerList,值为：203.66.83.46:3128,122.225.22.22:8080,82.222.19.54:8080,59.57.15.71:80,59.172.208.187:8080,60.250.20.107:3128,82.222.49.65:8080,125.88.75.151:3128,116.236.205.100:80,119.97.146.152:80,119.97.146.150:80,59.172.208.186:8080,115.182.38.42:80,61.166.155.230:8080,219.130.39.9:3128,180.96.19.24:8080,180.96.19.25:8080,119.145.197.69:8080,121.8.209.190:3128,202.103.215.203:80,218.247.138.40:80,202.43.179.182:54321,219.159.105.180:8080,220.168.248.101:80,218.6.13.35:80,220.168.248.106:80,211.152.36.99:80,82.222.48.1:8080,218.22.80.61:3128,82.222.49.81:8080,120.35.31.101:8080,124.193.109.117:80,222.127.106.89:3128,122.226.240.233:80,219.134.240.203:80,222.184.9.242:3128,122.226.240.235:80,121.14.133.169:3128,218.94.149.114:8080,60.250.109.87:3128,60.190.77.98:3128,85.105.19.200:80,61.157.77.11:80,61.157.217.31:80,118.112.185.71:8080,121.12.250.201:3128,222.83.210.45:8080,182.99.127.29:80,59.37.163.156:3128,115.236.98.109:80
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：accept,值为：text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：acceptLanguage,值为：zh-cn,zh;q=0.5
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：threadNum,值为：
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：taskTimeOut,值为：5000
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：resSaveRootPath,值为：u/cms/www/
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：defaultCommonReplaceWords,值为：
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：defaultWords,值为：丑牛爬虫
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：acceptCharset,值为：ISO-8859-1,utf-8;q=0.7,*;q=0.7
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：extractMediaResType,值为：swf,flv
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：resSavePath,值为：
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：cacheControl,值为：no-cache
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：userAgent,值为：Mozilla/5.0 (Windows; U; Windows NT 5.1; zh-CN; rv:1.9.2.6) Gecko/20100625 Firefox/3.6.6 Greatwqs
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：keepAlive,值为：300
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.loader.ConfigLoader加载配置：crawlerAppInitConfig,路径为：/resources/config/CrawlerAppInitConfig.properties
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：frameWidth,值为：900
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：version,值为：3.12
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：welocmeMusicName,值为：calf.wav
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：frameHeight,值为：615
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：showAdvertisement,值为：false
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：showMusic,值为：true
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：advertisementPath,值为：
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.utils.PropertiesHelper=====加载配置项：msgMusicName,值为：msg.wav
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.base.loader.ConfigLoader爬虫参数配置文件加载完成
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] com.bjm.pms.crawler.view.core.runcycle.support.CowSwingRunCycleManager开始初始化Spring容器.....
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] org.springframework.context.support.ClassPathXmlApplicationContextRefreshing org.springframework.context.support.ClassPathXmlApplicationContext@40b718: startup date [Tue Dec 09 18:53:35 CST 2014]; root of context hierarchy
+2014-12-09 18:53:35 [INFO ] - [AWT-EventQueue-0] org.springframework.beans.factory.xml.XmlBeanDefinitionReaderLoading XML bean definitions from class path resource [resources/spring/applicationContext.xml]
+2014-12-09 18:53:41 [INFO ] - [AWT-EventQueue-0] org.springframework.beans.factory.config.PropertyPlaceholderConfigurerLoading properties file from class path resource [resources/jdbc.properties]
+2014-12-09 18:53:41 [INFO ] - [AWT-EventQueue-0] org.springframework.beans.factory.support.DefaultListableBeanFactoryPre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@778a5d: defining beans [defaultCache,defaultDisposeService,defaultInitService,defaultTabPanel,defaultAction,defaultListPage,defaultUIPlugin,cowSwingCacheManager,disposeServiceManager,initServiceManager,cacheScheduleProcessor,initScheduleProcessor,shutDownScheduleProcessor,runSchedule,shutDownSchedule,startSchedule,cowSwingMainFrame,advertisementPanel,applicationStartScheduleProcessor,paginationBar,appMenuBar,appToolBar,curtainCardPerspective,viewDialog,navigator,pageContainer,systemTabPanel,viewDeatilPanel,viewImagePanel,XMLMapperLoader,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,propertyConfigurer,dataSource,transactionManager,txServiceMethods,txPluginServiceMethods,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,txAdvice,sqlSessionFactory,myBatisPersistence,persistService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-12-09 18:53:42 [INFO ] - [AWT-EventQueue-0] com.mchange.v2.log.MLogMLog clients using log4j logging.
+2014-12-09 18:53:42 [INFO ] - [AWT-EventQueue-0] com.mchange.v2.c3p0.C3P0RegistryInitializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2014-12-09 18:53:43 [INFO ] - [AWT-EventQueue-0] org.springframework.beans.factory.support.DefaultListableBeanFactoryDestroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@778a5d: defining beans [defaultCache,defaultDisposeService,defaultInitService,defaultTabPanel,defaultAction,defaultListPage,defaultUIPlugin,cowSwingCacheManager,disposeServiceManager,initServiceManager,cacheScheduleProcessor,initScheduleProcessor,shutDownScheduleProcessor,runSchedule,shutDownSchedule,startSchedule,cowSwingMainFrame,advertisementPanel,applicationStartScheduleProcessor,paginationBar,appMenuBar,appToolBar,curtainCardPerspective,viewDialog,navigator,pageContainer,systemTabPanel,viewDeatilPanel,viewImagePanel,XMLMapperLoader,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,propertyConfigurer,dataSource,transactionManager,txServiceMethods,txPluginServiceMethods,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,txAdvice,sqlSessionFactory,myBatisPersistence,persistService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy

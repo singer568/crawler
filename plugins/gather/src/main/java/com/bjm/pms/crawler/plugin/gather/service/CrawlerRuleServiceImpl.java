@@ -11,20 +11,20 @@ import org.springframework.stereotype.Service;
 
 import com.bjm.pms.crawler.persist.PaginationSupport;
 import com.bjm.pms.crawler.plugin.core.beans.CrawlerFtpConfigBean;
+import com.bjm.pms.crawler.plugin.core.service.beans.RuleBaseBean;
+import com.bjm.pms.crawler.plugin.core.service.beans.RuleFieldsBean;
 import com.bjm.pms.crawler.plugin.gather.domain.CrawlerRule;
-import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerRuleBean;
 import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerRuleCriteria;
-import com.bjm.pms.crawler.plugin.gather.service.beans.RuleBaseBean;
-import com.bjm.pms.crawler.plugin.gather.service.beans.RuleCommentBean;
-import com.bjm.pms.crawler.plugin.gather.service.beans.RuleContentBean;
-import com.bjm.pms.crawler.plugin.gather.service.beans.RuleContentPageBean;
-import com.bjm.pms.crawler.plugin.gather.service.beans.RuleDataBaseBean;
-import com.bjm.pms.crawler.plugin.gather.service.beans.RuleFieldsBean;
-import com.bjm.pms.crawler.plugin.gather.service.beans.RuleLocalBean;
 import com.bjm.pms.crawler.plugin.tool.ui.bean.ImageSettingBean;
 import com.bjm.pms.crawler.view.base.constant.Constant;
 import com.bjm.pms.crawler.view.base.loader.LanguageLoader;
 import com.bjm.pms.crawler.view.base.service.AbstractCrawlerService;
+import com.bjm.pms.crawler.view.base.service.beans.CrawlerRuleBean;
+import com.bjm.pms.crawler.view.base.service.beans.RuleCommentBean;
+import com.bjm.pms.crawler.view.base.service.beans.RuleContentBean;
+import com.bjm.pms.crawler.view.base.service.beans.RuleContentPageBean;
+import com.bjm.pms.crawler.view.base.service.beans.RuleDataBaseBean;
+import com.bjm.pms.crawler.view.base.service.beans.RuleLocalBean;
 import com.bjm.pms.crawler.view.base.utils.DateUtil;
 
 /**

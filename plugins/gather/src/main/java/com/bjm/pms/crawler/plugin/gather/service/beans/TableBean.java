@@ -6,6 +6,8 @@ package com.bjm.pms.crawler.plugin.gather.service.beans;
 
 import java.util.List;
 
+import com.bjm.pms.crawler.view.base.service.beans.ColumnBean;
+
 /**
  * 表类型信息
  *@author DuanYong

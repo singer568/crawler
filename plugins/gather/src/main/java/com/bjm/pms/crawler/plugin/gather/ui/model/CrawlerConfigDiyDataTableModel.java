@@ -7,7 +7,7 @@ package com.bjm.pms.crawler.plugin.gather.ui.model;
 import java.util.List;
 
 import com.bjm.pms.crawler.plugin.core.service.beans.CrawlerConfigBean;
-import com.bjm.pms.crawler.plugin.gather.constant.GatherConstant;
+import com.bjm.pms.crawler.view.base.constant.GatherConstant;
 import com.bjm.pms.crawler.view.ui.model.AbstractCrawlerTableModel;
 
 

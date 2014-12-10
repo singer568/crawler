@@ -16,12 +16,12 @@ import javax.swing.event.ListSelectionListener;
 import org.springframework.stereotype.Component;
 
 import com.bjm.pms.crawler.persist.PaginationSupport;
-import com.bjm.pms.crawler.plugin.gather.constant.GatherConstant;
 import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerContentPaginationBean;
 import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerContentPaginationCriteria;
 import com.bjm.pms.crawler.plugin.gather.ui.action.DeleteContentPaginationAction;
 import com.bjm.pms.crawler.plugin.gather.ui.action.ViewContentPaginationAction;
 import com.bjm.pms.crawler.plugin.gather.ui.model.CrawlerContentPaginationTabelModel;
+import com.bjm.pms.crawler.view.base.constant.GatherConstant;
 import com.bjm.pms.crawler.view.base.loader.LanguageLoader;
 import com.bjm.pms.crawler.view.base.service.ICrawlerService;
 import com.bjm.pms.crawler.view.core.event.CowSwingEvent;

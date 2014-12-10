@@ -11,11 +11,11 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Service;
 
 import com.bjm.pms.crawler.persist.PaginationSupport;
-import com.bjm.pms.crawler.plugin.gather.constant.GatherConstant;
 import com.bjm.pms.crawler.plugin.gather.domain.CrawlerContentResource;
 import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerContentResourceBean;
 import com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerContentResourceCriteria;
 import com.bjm.pms.crawler.view.base.constant.Constant;
+import com.bjm.pms.crawler.view.base.constant.GatherConstant;
 import com.bjm.pms.crawler.view.base.service.AbstractCrawlerService;
 import com.bjm.pms.crawler.view.base.utils.FileUtils;
 

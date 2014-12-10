@@ -7,7 +7,7 @@ package com.bjm.pms.crawler.plugin.gather.ui.view.panel;
 import org.springframework.stereotype.Component;
 
 import com.bjm.pms.crawler.plugin.core.beans.CrawlerDiyDataConfigBean;
-import com.bjm.pms.crawler.plugin.gather.constant.GatherConstant;
+import com.bjm.pms.crawler.view.base.constant.GatherConstant;
 import com.bjm.pms.crawler.view.base.loader.LanguageLoader;
 import com.bjm.pms.crawler.view.ui.listener.TextVerifier;
 import com.bjm.pms.crawler.view.ui.view.panel.AbstractContentPanel;

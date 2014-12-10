@@ -20,13 +20,13 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.bjm.pms.crawler.plugin.gather.service.beans.ExtendFieldsBean;
-import com.bjm.pms.crawler.plugin.gather.service.beans.RuleBaseBean;
-import com.bjm.pms.crawler.plugin.gather.service.beans.RuleFieldsBean;
+import com.bjm.pms.crawler.plugin.core.service.beans.RuleBaseBean;
+import com.bjm.pms.crawler.plugin.core.service.beans.RuleFieldsBean;
 import com.bjm.pms.crawler.plugin.gather.service.local.LocalDocParser;
 import com.bjm.pms.crawler.view.base.constant.Constant;
 import com.bjm.pms.crawler.view.base.loader.ImageLoader;
 import com.bjm.pms.crawler.view.base.loader.LanguageLoader;
+import com.bjm.pms.crawler.view.base.service.beans.ExtendFieldsBean;
 import com.bjm.pms.crawler.view.ui.listener.TextVerifier;
 import com.bjm.pms.crawler.view.ui.view.panel.AbstractContentPanel;
 /**
