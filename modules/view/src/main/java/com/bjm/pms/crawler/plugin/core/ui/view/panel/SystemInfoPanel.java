@@ -111,6 +111,9 @@ public class SystemInfoPanel extends AbstractTabPanel{
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
 				final Map<String, Map<String, String>> plugins = CowSwingContextData.getInstance().getPlugins();
+				if (null == plugins) {
+					return;
+				}
 				String key = "";
 				for(Iterator<String> it = plugins.keySet().iterator();it.hasNext();){
 					key = it.next();
@@ -146,6 +149,9 @@ public class SystemInfoPanel extends AbstractTabPanel{
 	
 	private void initRequiresMap(){
 		Map<String, Map<String, String>> plugins = CowSwingContextData.getInstance().getPlugins();
+		if (null == plugins) {
+			return;
+		}
 		String key = "";
 		String[] tempValue = null;
 		for(Iterator<String> it = plugins.keySet().iterator();it.hasNext();){

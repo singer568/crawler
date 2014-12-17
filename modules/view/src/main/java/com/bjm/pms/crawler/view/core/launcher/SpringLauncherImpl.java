@@ -23,7 +23,7 @@ import com.bjm.pms.crawler.view.plugin.core.constant.CoreConstant;
  * @version 1.0
  */
 public class SpringLauncherImpl implements ILauncher {
-	
+
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -31,30 +31,40 @@ public class SpringLauncherImpl implements ILauncher {
 	 */
 	@Override
 	public void launch() {
-		Map<String, Map<String, String>> plugins = CowSwingContextData.getInstance().getPlugins();
+		Map<String, Map<String, String>> plugins = CowSwingContextData
+				.getInstance().getPlugins();
 		List<String> activePlugins = new ArrayList<String>();
 		activePlugins.add("resources/spring/applicationContext.xml");
 		String key = "";
 		String[] tempPaths = null;
-		for(Iterator<String> it = plugins.keySet().iterator();it.hasNext();){
-			key = it.next();
-			if(Boolean.valueOf(plugins.get(key).get(CoreConstant.PLUGIN_PROPERTIES_KY_ACTIVE))){
-				if(StringUtils.isNotBlank(plugins.get(key).get(CoreConstant.PLUGIN_PROPERTIES_KY_BEANXMLPATH))){
-					tempPaths = plugins.get(key).get(CoreConstant.PLUGIN_PROPERTIES_KY_BEANXMLPATH).split(",");
-					for(String path : tempPaths){
-						activePlugins.add(path);
+		if (null != plugins) {
+			for (Iterator<String> it = plugins.keySet().iterator(); it
+					.hasNext();) {
+				key = it.next();
+				if (Boolean.valueOf(plugins.get(key).get(
+						CoreConstant.PLUGIN_PROPERTIES_KY_ACTIVE))) {
+					if (StringUtils.isNotBlank(plugins.get(key).get(
+							CoreConstant.PLUGIN_PROPERTIES_KY_BEANXMLPATH))) {
+						tempPaths = plugins
+								.get(key)
+								.get(CoreConstant.PLUGIN_PROPERTIES_KY_BEANXMLPATH)
+								.split(",");
+						for (String path : tempPaths) {
+							activePlugins.add(path);
+						}
 					}
 				}
 			}
 		}
+
 		int i = 0;
 		String[] contextPaths = new String[activePlugins.size()];
-		for(String xmlPath : activePlugins){
+		for (String xmlPath : activePlugins) {
 			contextPaths[i] = xmlPath;
 			i++;
 		}
-		CowSwingContextData.getInstance().setApplicationContext(new ClassPathXmlApplicationContext(contextPaths));
+		CowSwingContextData.getInstance().setApplicationContext(
+				new ClassPathXmlApplicationContext(contextPaths));
 	}
-	
-    
+
 }

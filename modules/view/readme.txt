@@ -26,3 +26,11 @@
 
 争取使组件能够独立运行，独立调试；
 
+
+12-12  修改pluginsloader类，实现插件加载
+将plugins下面的每个目录作为一个插件，插件下面lib包加载进classpath当中
+
+下一步需要将context和mybatis的config文件抽出来，放到plugins下面每个目录下的config里面
+
+
+

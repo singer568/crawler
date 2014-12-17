@@ -1,0 +1,2 @@
+2014-12-11 10:55:47 [FATAL] - [AWT-EventQueue-0] java.lang.ClassNotFoundException: com.wateray.ipassbook.ui.substance.SubstanceATunesBlueLookAndFeel
+2014-12-11 10:55:48 [FATAL] - [AWT-EventQueue-0] java.lang.ClassNotFoundException: com.wateray.ipassbook.ui.substance.SubstanceATunesGrayLookAndFeel

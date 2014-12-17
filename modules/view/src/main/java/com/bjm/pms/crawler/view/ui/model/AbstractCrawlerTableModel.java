@@ -1,5 +1,6 @@
 package com.bjm.pms.crawler.view.ui.model;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -40,7 +41,9 @@ public abstract class AbstractCrawlerTableModel<T> extends AbstractTableModel{
 		return this.dataList;
 	}
 	public void setData(List<T> entityList) {
-		dataList = entityList;
+		
+		dataList = entityList == null ? new ArrayList<T>(): entityList;
+		
 		this.fireTableDataChanged();
 	}
     

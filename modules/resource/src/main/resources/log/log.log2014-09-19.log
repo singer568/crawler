@@ -1,4 +1,0 @@
-2014-09-19 19:30:44 [FATAL] - [AWT-EventQueue-0] org.javacoo.cowswing.ui.style.LookAndFeelSelectorjava.lang.ClassNotFoundException: com.wateray.ipassbook.ui.substance.SubstanceATunesDarkLookAndFeel
-2014-09-19 19:32:03 [FATAL] - [AWT-EventQueue-0] org.javacoo.cowswing.ui.style.LookAndFeelSelectorjava.lang.ClassNotFoundException: com.wateray.ipassbook.ui.substance.SubstanceATunesBlueLookAndFeel
-2014-09-19 19:32:05 [FATAL] - [AWT-EventQueue-0] org.javacoo.cowswing.ui.style.LookAndFeelSelectorjava.lang.ClassNotFoundException: com.wateray.ipassbook.ui.substance.SubstanceATunesDarkLookAndFeel
-2014-09-19 19:32:06 [FATAL] - [AWT-EventQueue-0] org.javacoo.cowswing.ui.style.LookAndFeelSelectorjava.lang.ClassNotFoundException: com.wateray.ipassbook.ui.substance.SubstanceATunesGrayLookAndFeel

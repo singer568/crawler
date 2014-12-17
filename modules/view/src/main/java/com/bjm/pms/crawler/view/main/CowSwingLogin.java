@@ -346,19 +346,19 @@ public class CowSwingLogin extends JFrame {
             userBean.setUsername(userNameTextField.getText());
             userBean.setPassword(passwordTextField.getText());
 			userBean.setLastLoginIp(InetAddress.getLocalHost().getHostAddress());
-			ManagerService service = (ManagerService)CowSwingContextData.getInstance().getContextDataByKey(Constant.CONTEXT_DATA_KEY_WEBSERVICE);
-			userBean = service.login(userBean);
-			if(userBean.getIsLoginSuccess()){
+//			ManagerService service = (ManagerService)CowSwingContextData.getInstance().getContextDataByKey(Constant.CONTEXT_DATA_KEY_WEBSERVICE);
+//			userBean = service.login(userBean);
+//			if(userBean.getIsLoginSuccess()){
 				CowSwingContextData.getInstance().setContextData(Constant.CONTEXT_DATA_KEY_USERANME, userBean);
 				if(rememberMe.isSelected()){
 					// 记录柜员号到本地属性配置文件
 					saveUserIdToLocalProperty(userBean.getUsername());
 				}
 				return true;
-			}else{
-				errorMsg = userBean.getErrorMsg();
-				return false;
-			}
+//			}else{
+//				errorMsg = userBean.getErrorMsg();
+//				return false;
+//			}
 		} catch (Exception e) {
 			e.printStackTrace();
 			int result = JOptionPane.showConfirmDialog(null, "连接主机失败,是否离线运行?", "系统提示",JOptionPane.YES_NO_OPTION); 

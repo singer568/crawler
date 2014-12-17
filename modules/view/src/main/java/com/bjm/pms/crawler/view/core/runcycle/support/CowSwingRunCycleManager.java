@@ -71,6 +71,7 @@ public class CowSwingRunCycleManager implements ICowSwingRunCycle{
 	}
 	/**
 	 * 初始化Spring容器
+	 * 将系统本身的及插件的所有spring配置文件一起初始化
 	 * <p>方法说明:</>
 	 * <li></li>
 	 * @author DuanYong
@@ -81,7 +82,7 @@ public class CowSwingRunCycleManager implements ICowSwingRunCycle{
 	private void initSpringContext() {
 		logger.info("开始初始化Spring容器.....");
 	    long startDate = System.currentTimeMillis();
-		ILauncher launcher = new SpringLauncherImpl();
+		ILauncher launcher = new SpringLauncherImpl();  
 		launcher.launch();
         logger.info("Spring容器初始化成功,消耗时间:" + (System.currentTimeMillis() - startDate));
 	}

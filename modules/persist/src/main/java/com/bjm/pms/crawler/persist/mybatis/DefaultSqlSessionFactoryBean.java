@@ -9,12 +9,18 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
 import javax.sql.DataSource;
 
+import org.apache.commons.lang.StringUtils;
 import org.apache.ibatis.builder.xml.XMLConfigBuilder;
 import org.apache.ibatis.builder.xml.XMLMapperBuilder;
 import org.apache.ibatis.executor.ErrorContext;
@@ -42,23 +48,21 @@ import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.transaction.SpringManagedTransactionFactory;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.NestedIOException;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.jdbc.datasource.TransactionAwareDataSourceProxy;
 import org.xml.sax.EntityResolver;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
+import com.bjm.pms.crawler.view.core.context.CowSwingContextData;
+import com.bjm.pms.crawler.view.plugin.core.constant.CoreConstant;
+
 public class DefaultSqlSessionFactoryBean extends SqlSessionFactoryBean {
 	
 	private static final Log logger = LogFactory
 			.getLog(SqlSessionFactoryBean.class);
 	private SqlSessionFactoryBuilder sqlSessionFactoryBuilder = new SqlSessionFactoryBuilder();
-	
-	
-	/**
-	 * 确定plugins的相关目录
-	 */
-	private final String PLUGINS_DIRECTORY = "/plugins/";
 	
 	private Interceptor[] plugins;
 	private Class<?>[] typeAliases;
@@ -175,13 +179,41 @@ public class DefaultSqlSessionFactoryBean extends SqlSessionFactoryBean {
 	 * @throws IOException
 	 */
 	protected SqlSessionFactory buildSqlSessionFactory() throws IOException {
+		Map<String, Map<String, String>>  plugins = CowSwingContextData.getInstance().getPlugins();
+		String key = "";
+		String[] tempPaths = null;
+		
+		List<Resource> configs = new ArrayList<Resource>();
+		configs.addAll(Arrays.asList(configLocations));
+
+		for (Iterator<String> it = plugins.keySet().iterator(); it.hasNext();) {
+			key = it.next();
+			if (Boolean.valueOf(plugins.get(key).get(
+					CoreConstant.PLUGIN_PROPERTIES_KY_ACTIVE))) {
+				if (StringUtils.isNotBlank(plugins.get(key).get(
+						CoreConstant.PLUGIN_PROPERTIES_KY_MYBATISCONFIG))) {
+					tempPaths = plugins
+							.get(key)
+							.get(CoreConstant.PLUGIN_PROPERTIES_KY_MYBATISCONFIG)
+							.split(",");
+					for (String path : tempPaths) {
+						configs.add(new ClassPathResource(path));
+					}
+				}
+			}
+		}
+		
+		
+		
+		
+		
 		Configuration configuration = null;
 		XMLConfigBuilder xmlConfigBuilder = null;
 		Document document = this.SQLConfigMap();
 		Element root = document.getRootElement();
 		Element elementMapper = root.element("mappers");
 		Element elementTypeAlias = root.element("typeAliases");
-		for (Resource configLocation : configLocations) {
+		for (Resource configLocation : configs) {
 			readXML(configLocation, elementTypeAlias, elementMapper);
 		}
 		if (this.configLocations != null) {

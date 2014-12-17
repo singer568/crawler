@@ -933,7 +933,7 @@ public class ImageSettingPanel extends AbstractContentPanel<ImageSettingBean> im
 	 * @since 2012-12-16 下午5:40:30
 	 * @return Component
 	 */
-	protected JComponent getLeftPane() {
+	public JComponent getLeftPane() {
 		JPanel leftPanel = new JPanel();
 		leftPanel.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
 		leftPanel.setBorder(new EtchedBorder());
@@ -1209,7 +1209,7 @@ public class ImageSettingPanel extends AbstractContentPanel<ImageSettingBean> im
 	 * @since 2012-12-16 下午5:40:23
 	 * @return Component
 	 */
-	protected JComponent getCenterPane() {
+	public JComponent getCenterPane() {
 		centerPanel = new JLayeredPane();
 		centerPanel.setBorder(new EtchedBorder());
 		
@@ -1230,7 +1230,7 @@ public class ImageSettingPanel extends AbstractContentPanel<ImageSettingBean> im
 	 * @since 2012-12-16 下午5:40:17
 	 * @return Component
 	 */
-	protected JComponent getTopPane() {
+	public JComponent getTopPane() {
 		JPanel topPanel = new JPanel();
 		topPanel.setLayout(new GridLayout(2, 1));
 		topPanel.setBorder(new EtchedBorder());

@@ -169,7 +169,9 @@ public class MsgListPanel  extends AbstractBaseListPage implements ListSelection
 			msgBean.setUserName(userBean.getUsername());
 		}
 		try{
-			PaginationBean<MsgBean> paginationBean = service.getMsgList(msgBean);
+			PaginationBean<MsgBean> paginationBean = new PaginationBean<MsgBean>(); 
+					
+					//service.getMsgList(msgBean);
 			PaginationSupport<MsgBean> resultList = new PaginationSupport(paginationBean.getList(),paginationBean.getTotalCount(),paginationBean.getPageNo(),paginationBean.getPageSize());
 			paginationBar.setPaginationSupport(resultList);
 			paginationBar.setListPage(this);

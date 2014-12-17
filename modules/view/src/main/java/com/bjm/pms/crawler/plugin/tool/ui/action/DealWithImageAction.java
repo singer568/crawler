@@ -42,6 +42,7 @@ public class DealWithImageAction extends AbstractAction{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		imageSettingPanel.init();
 		imageListPanel.dealWith(this.imageSettingPanel.getImageSettingBean());
 	}
 
