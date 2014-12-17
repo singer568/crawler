@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="CrawlerConfigMapper">
+
+  <cache />
+  
+  <resultMap id="crawlerConfigResultMap" type="CrawlerConfig">
+     <result property="configId" column="config_id" />
+     <result property="configType" column="config_type" />
+     <result property="configContent" column="config_content" />
+   </resultMap>
+  
+  <select id="getCrawlerConfigList" parameterType="CrawlerConfigCriteria" resultMap="crawlerConfigResultMap" >
+    SELECT   
+          r.config_id,
+          r.config_type,
+          r.config_content
+    FROM 
+          crawler_config r
+    WHERE 1 = 1
+    	<if test="configType != null">  
+	        AND r.config_type = #{configType}  
+	    </if>
+  	ORDER BY 
+          r.config_id DESC
+   </select>
+    <select id="getCrawlerConfigList_COUNT" parameterType="CrawlerConfigCriteria" resultType="java.lang.Integer" >
+    SELECT count(*)
+    FROM 
+          crawler_config r
+    WHERE 1 = 1
+    	<if test="configType != null">  
+	        AND r.config_type = #{configType}  
+	    </if>
+  	ORDER BY 
+          r.config_id DESC
+   </select>
+   <select id="getCrawlerConfigById" parameterType="CrawlerConfig" resultMap="crawlerConfigResultMap">
+    SELECT   
+          r.config_id,
+          r.config_type,
+          r.config_content
+    FROM 
+          crawler_config r
+  	WHERE
+          r.config_id = #{configId}
+   </select>
+   
+   <insert id="insertCrawlerConfig" parameterType="CrawlerConfig"  useGeneratedKeys="true"   keyProperty="configId">
+    INSERT INTO crawler_config
+      (config_type, config_content)
+    VALUES
+      (#{configType}, #{configContent})
+  </insert>
+  
+  <update id="updateCrawlerConfig" parameterType="CrawlerConfig">
+    UPDATE crawler_Config
+           <trim prefix="SET" suffixOverrides=",">  
+           		<if test="configContent != null and configContent != '' ">  
+		            config_content = #{configContent}, 
+		        </if> 
+           		<if test="configType != null">  
+		            config_type = #{configType}, 
+		        </if>
+            </trim>
+     WHERE config_id = #{configId}
+  </update>
+  
+  
+  <delete id="deleteCrawlerConfig" parameterType="CrawlerConfig">
+     DELETE FROM crawler_config WHERE config_id IN 
+     <foreach  collection="configIdList" item="configIdList" separator="," open="(" close=")">
+    	#{configIdList}
+    </foreach>
+  </delete>
+</mapper>

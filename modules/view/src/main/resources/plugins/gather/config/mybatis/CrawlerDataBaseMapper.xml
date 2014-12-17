@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="CrawlerDataBaseMapper">
+
+  <cache />
+  
+  <resultMap id="crawlerDataBaseResultMap" type="CrawlerDataBase">
+     <result property="dataBaseId" column="database_id" />
+     <result property="description" column="description" />
+     <result property="url" column="url" />
+     <result property="userName" column="user_name" />
+     <result property="password" column="password" />
+     <result property="className" column="class_name" />
+     <result property="type" column="type" />
+   </resultMap>
+  
+  <select id="getCrawlerDataBaseList" parameterType="CrawlerDataBaseCriteria" resultMap="crawlerDataBaseResultMap" >
+    SELECT   
+          r.database_id,
+          r.description,
+          r.url,
+          r.user_name,
+          r.password,
+          r.class_name,
+          r.type
+    FROM 
+          crawler_database r
+  	ORDER BY 
+          r.database_id DESC
+   </select>
+    <select id="getCrawlerDataBaseList_COUNT" parameterType="CrawlerDataBaseCriteria" resultType="java.lang.Integer" >
+    SELECT count(*)
+    FROM 
+          crawler_database r
+  	ORDER BY 
+          r.database_id DESC
+   </select>
+   <select id="getCrawlerDataBaseById" parameterType="CrawlerDataBase" resultMap="crawlerDataBaseResultMap">
+    SELECT   
+          r.database_id,
+          r.description,
+          r.url,
+          r.user_name,
+          r.password,
+          r.class_name,
+          r.type
+    FROM 
+          crawler_database r
+  	WHERE
+          r.database_id = #{dataBaseId}
+   </select>
+   
+   <insert id="insertCrawlerDataBase" parameterType="CrawlerDataBase"  useGeneratedKeys="true"  keyProperty="dataBaseId">
+    INSERT INTO crawler_database
+      (description, url, user_name,password,class_name,type)
+    VALUES
+      (#{description}, #{url}, #{userName}, #{password}, #{className}, #{type})
+  </insert>
+  
+  <update id="updateCrawlerDataBase" parameterType="CrawlerDataBase">
+    UPDATE crawler_database
+           <trim prefix="SET" suffixOverrides=",">  
+           		<if test="description != null and description != '' ">  
+		            description = #{description}, 
+		        </if> 
+           		<if test="url != null and url != '' ">  
+		            url = #{url}, 
+		        </if>
+		        <if test="userName != null and userName != '' ">  
+		            user_name = #{userName}, 
+		        </if>
+		        <if test="password != null and password != '' ">  
+		            password = #{password}, 
+		        </if>
+		        <if test="className != null and className != '' ">  
+		            class_name = #{className}, 
+		        </if>
+		        <if test="type != null and type != '' ">  
+		            type = #{type}
+		        </if>
+            </trim>
+     WHERE database_id = #{dataBaseId}
+  </update>
+  
+  
+  <delete id="deleteCrawlerDataBase" parameterType="CrawlerDataBase">
+     DELETE FROM crawler_database WHERE database_id IN 
+     <foreach  collection="dataBaseIdList" item="dataBaseIdList" separator="," open="(" close=")">
+    	#{dataBaseIdList}
+    </foreach>
+  </delete>
+</mapper>

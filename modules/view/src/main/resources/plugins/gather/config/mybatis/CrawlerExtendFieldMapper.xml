@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="CrawlerExtendFieldMapper">
+
+  <cache />
+  <resultMap id="crawlerExtendFieldResultMap" type="CrawlerExtendField">
+     <result property="extendFieldId" column="extend_field_id" />
+     <result property="contentId" column="content_id" />
+     <result property="ruleId" column="rule_id" />
+     <result property="fieldName" column="field_name" />
+     <result property="fieldValue" column="field_value" />
+   </resultMap>
+  
+  <select id="getCrawlerExtendFieldList" parameterType="CrawlerExtendFieldCriteria" resultMap="crawlerExtendFieldResultMap">
+    SELECT   
+          h.extend_field_id,
+     	  h.content_id,
+     	  h.rule_id,
+          h.field_name,
+          h.field_value
+    FROM 
+          crawler_extend_field h
+    WHERE 1 = 1
+	    <if test="contentId != null and contentId != '' ">  
+	        AND h.content_id = #{contentId}  
+	    </if>
+	    <if test="ruleId != null and ruleId != '' ">  
+	        AND h.rule_id = #{ruleId}  
+	    </if>
+	    <if test="fieldName != null and fieldName != '' ">  
+	        AND h.field_name = #{fieldName}  
+	    </if>
+	    <if test="fieldValue != null and fieldValue != '' ">  
+	        AND h.field_value = #{fieldValue}  
+	    </if>
+  	ORDER BY 
+          h.extend_field_id DESC
+   </select>
+   <select id="getCrawlerExtendFieldList_COUNT" parameterType="CrawlerExtendFieldCriteria" resultType="java.lang.Integer">
+    SELECT count(*)
+    FROM 
+          crawler_extend_field h
+    WHERE 1 = 1
+       <if test="contentId != null and contentId != '' ">  
+	        AND h.content_id = #{contentId}  
+	    </if>
+	    <if test="ruleId != null and ruleId != '' ">  
+	        AND h.rule_id = #{ruleId}  
+	    </if>
+	    <if test="fieldName != null and fieldName != '' ">  
+	        AND h.field_name = #{fieldName}  
+	    </if>
+	    <if test="fieldValue != null and fieldValue != '' ">  
+	        AND h.field_value = #{fieldValue}  
+	    </if>
+  	ORDER BY 
+          h.extend_field_id DESC
+   </select>
+   
+   <select id="getCrawlerExtendFieldById" parameterType="CrawlerExtendFieldCriteria" resultMap="crawlerExtendFieldResultMap">
+    SELECT   
+          h.extend_field_id,
+     	  h.content_id,
+     	  h.rule_id,
+          h.field_name,
+          h.field_value
+    FROM 
+          crawler_extend_field h
+  	WHERE
+          h.extend_field_id = #{extendFieldId}
+   </select>
+   
+  <insert id="insertCrawlerExtendField" parameterType="CrawlerExtendField"  useGeneratedKeys="true"  keyProperty="extendFieldId">
+    INSERT INTO crawler_extend_field
+      (content_id,rule_id,field_name,field_value)
+    VALUES
+      (#{contentId},#{ruleId},#{fieldName},#{fieldValue})
+  </insert>
+  
+  <update id="updateCrawlerExtendField" parameterType="CrawlerExtendField">
+    UPDATE crawler_extend_field 
+           <trim prefix="SET" suffixOverrides=",">  
+		        <if test="contentId != null and contentId != '' ">  
+		            content_id = #{contentId}, 
+		        </if> 
+		         <if test="ruleId != null and ruleId != '' ">  
+		            rule_id = #{ruleId}, 
+		        </if> 
+		        <if test="fieldName != null and fieldName != '' ">  
+		            field_name = #{fieldName}
+		        </if> 
+		        <if test="fieldValue != null and fieldValue != '' ">  
+		            field_value = #{fieldValue}
+		        </if>
+		   </trim>
+    WHERE extend_field_id = #{extendFieldId}
+  </update>
+   <delete id="deleteCrawlerExtendFieldByRuleId" parameterType="CrawlerExtendField">
+     DELETE FROM crawler_extend_field WHERE rule_id IN
+      <foreach  collection="ruleIdList" item="ruleIdList" separator="," open="(" close=")">
+    	#{ruleIdList}
+      </foreach>
+  </delete>
+  <delete id="deleteCrawlerExtendFieldByContentId" parameterType="CrawlerExtendField">
+     DELETE FROM crawler_extend_field WHERE content_id IN
+     <foreach  collection="contentIdList" item="contentIdList" separator="," open="(" close=")">
+    	#{contentIdList}
+     </foreach>
+  </delete>
+  <delete id="deleteCrawlerExtendFieldById" parameterType="CrawlerHistory">
+     DELETE FROM crawler_extend_field  WHERE extend_field_id IN
+     <foreach  collection="extendFieldIdList" item="extendFieldIdList" separator="," open="(" close=")">
+    	#{extendFieldIdList}
+    </foreach>
+  </delete>
+  
+</mapper>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="CrawlerContentResourceMapper">
+
+  <cache />
+   <resultMap id="crawlerContentResourceResultMap" type="CrawlerContentResource">
+     <result property="resourceId" column="resource_id" />
+     <result property="contentId" column="content_id" />
+     <result property="ruleId" column="rule_id" />
+     <result property="path" column="path" />
+     <result property="name" column="name" />
+     <result property="type" column="type" />
+     <result property="hasUpload" column="has_upload" />
+     <result property="hasDealWith" column="has_dealWith" />
+     <result property="isLocal" column="is_local" />
+     
+   </resultMap>
+  
+  <select id="getCrawlerContentResourceList" parameterType="CrawlerContentResourceCriteria" resultMap="crawlerContentResourceResultMap">
+    SELECT   
+          r.resource_id,
+     	  r.content_id,
+          r.rule_id,
+          r.path,
+          r.name,
+          r.type,
+          r.has_upload,
+          r.has_dealWith,
+          r.is_local
+    FROM 
+          crawler_content_resource r
+    WHERE 1 = 1
+        <if test="ruleId != null and ruleId != '' ">  
+	        AND r.rule_id = #{ruleId}  
+	    </if>
+	    <if test="contentId != null and contentId != '' ">  
+	        AND r.content_id = #{contentId}  
+	    </if>
+	    <if test="hasUpload != null and hasUpload != '' ">  
+	        AND r.has_upload = #{hasUpload}  
+	    </if>
+	    <if test="hasDealWith != null and hasDealWith != '' ">  
+	        AND r.has_dealWith = #{hasDealWith}  
+	    </if>
+	    <if test="isLocal != null and isLocal != '' ">  
+	        AND r.is_local = #{isLocal}  
+	    </if>
+	    <if test="resourceIdList != null">  
+	        AND r.resource_id IN
+		     <foreach  collection="resourceIdList" item="resourceIdList" separator="," open="(" close=")">
+		    	#{resourceIdList}
+		     </foreach> 
+	    </if>
+	    <if test="contentIdList != null">  
+	        AND r.content_id IN
+		     <foreach  collection="contentIdList" item="contentIdList" separator="," open="(" close=")">
+		    	#{contentIdList}
+		     </foreach> 
+	    </if>
+	    <if test="ruleIdList != null">  
+	        AND r.rule_id IN
+		     <foreach  collection="ruleIdList" item="ruleIdList" separator="," open="(" close=")">
+		    	#{ruleIdList}
+		     </foreach> 
+	    </if>
+  	ORDER BY 
+          r.resource_id DESC
+   </select>
+    <select id="getCrawlerContentResourceList_COUNT" parameterType="CrawlerContentResourceCriteria" resultType="java.lang.Integer">
+    SELECT count(*)
+    FROM 
+          crawler_content_resource r
+    WHERE 1 = 1
+        <if test="ruleId != null and ruleId != '' ">  
+	        AND r.rule_id = #{ruleId}  
+	    </if>
+	    <if test="contentId != null and contentId != '' ">  
+	        AND r.content_id = #{contentId}  
+	    </if>
+	    <if test="hasUpload != null and hasUpload != '' ">  
+	        AND r.has_upload = #{hasUpload}  
+	    </if>
+	    <if test="hasDealWith != null and hasDealWith != '' ">  
+	        AND r.has_dealWith = #{hasDealWith}  
+	    </if>
+	    <if test="isLocal != null and isLocal != '' ">  
+	        AND r.is_local = #{isLocal}  
+	    </if>
+	    <if test="resourceIdList != null">  
+	        AND r.resource_id IN
+		     <foreach  collection="resourceIdList" item="resourceIdList" separator="," open="(" close=")">
+		    	#{resourceIdList}
+		     </foreach> 
+	    </if>
+	    <if test="contentIdList != null">  
+	        AND r.content_id IN
+		     <foreach  collection="contentIdList" item="contentIdList" separator="," open="(" close=")">
+		    	#{contentIdList}
+		     </foreach> 
+	    </if>
+	    <if test="ruleIdList != null">  
+	        AND r.rule_id IN
+		     <foreach  collection="ruleIdList" item="ruleIdList" separator="," open="(" close=")">
+		    	#{ruleIdList}
+		     </foreach> 
+	    </if>
+  	ORDER BY 
+          r.resource_id DESC
+   </select>
+   
+   <select id="getCrawlerContentResourceById" parameterType="java.util.Map" resultMap="crawlerContentResourceResultMap">
+    SELECT   
+         r.resource_id,
+     	  r.content_id,
+          r.rule_id,
+          r.path,
+          r.name,
+          r.type,
+          r.has_upload,
+          r.has_dealWith,
+          r.is_local
+    FROM 
+          crawler_content_resource r
+  	WHERE
+          r.resource_id = #{resourceId}
+   </select>
+   
+  <insert id="insertCrawlerContentResource" parameterType="CrawlerContentResource"  useGeneratedKeys="true"  keyProperty="resourceId">
+    INSERT INTO crawler_content_resource
+      (content_id,rule_id,path,name,type,has_upload,has_dealWith,is_local)
+    VALUES
+      (#{contentId},#{ruleId},#{path},#{name},#{type},#{hasUpload},#{hasDealWith},#{isLocal})
+  </insert>
+  
+  <update id="updateCrawlerContentResource" parameterType="CrawlerContentResource">
+    UPDATE crawler_content_resource 
+           <trim prefix="SET" suffixOverrides=",">  
+           		<if test="ruleId != null and ruleId != '' ">  
+		            rule_id = #{ruleId}, 
+		        </if> 
+		        <if test="contentId != null and contentId != '' ">  
+		            content_id = #{contentId}, 
+		        </if> 
+		        <if test="path != null and path != '' ">  
+		            path = #{path},
+		        </if> 
+		        <if test="name != null and name != '' ">  
+		            name = #{name},
+		        </if>
+		        <if test="type != null and type != '' ">  
+		            type = #{type},
+		        </if>
+		        <if test="hasUpload != null and hasUpload != '' ">  
+		            has_upload = #{hasUpload},
+		        </if>
+		        <if test="hasDealWith != null and hasDealWith != '' ">  
+			        has_dealWith = #{hasDealWith},  
+			    </if>
+		        <if test="isLocal != null and isLocal != '' ">  
+		            is_local = #{isLocal}
+		        </if>
+		   </trim>
+    WHERE resource_id = #{resourceId}
+  </update>
+  <delete id="deleteCrawlerContentResourceByRuleId" parameterType="CrawlerContentResource">
+     DELETE FROM crawler_content_resource WHERE rule_id IN
+      <foreach  collection="ruleIdList" item="ruleIdList" separator="," open="(" close=")">
+    	#{ruleIdList}
+      </foreach>
+  </delete>
+  <delete id="deleteCrawlerContentResourceByContentId" parameterType="CrawlerContentResource">
+     DELETE FROM crawler_content_resource WHERE content_id IN
+     <foreach  collection="contentIdList" item="contentIdList" separator="," open="(" close=")">
+    	#{contentIdList}
+     </foreach>
+  </delete>
+  <delete id="deleteCrawlerContentResourceById" parameterType="CrawlerContentResource">
+     DELETE FROM crawler_content_resource WHERE resource_id IN
+     <foreach  collection="resourceIdList" item="resourceIdList" separator="," open="(" close=")">
+    	#{resourceIdList}
+     </foreach>
+  </delete>
+  
+</mapper>

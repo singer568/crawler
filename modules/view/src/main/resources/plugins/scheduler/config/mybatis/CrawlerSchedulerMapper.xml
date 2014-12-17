@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="CrawlerSchedulerMapper">
+
+  <cache />
+  
+  <resultMap id="crawlerSchedulerResultMap" type="Scheduler">
+     <result property="schedulerId" column="scheduler_id" />
+     <result property="associateId" column="associate_id" />
+     <result property="name" column="name" />
+     <result property="startTime" column="start_time" />
+     <result property="endTime" column="end_time" />
+     <result property="status" column="status" />
+     <result property="serviceName" column="service_name" />
+     <result property="expression" column="expression" />
+     <result property="week" column="week" />
+     <result property="hour" column="hour" />
+     <result property="minute" column="minute" />
+     <result property="second" column="second" />
+   </resultMap>
+  
+  <select id="getCrawlerSchedulerList" parameterType="SchedulerCriteria" resultMap="crawlerSchedulerResultMap" >
+    SELECT   
+          r.scheduler_id,
+          r.associate_id,
+          r.name,
+          r.start_time,
+          r.end_time,
+          r.status,
+          r.service_name,
+          r.expression,
+          r.week,
+          r.hour,
+          r.minute,
+          r.second
+    FROM 
+          crawler_scheduler r
+    WHERE 1 = 1
+    	<if test="serviceName != null">  
+	        AND r.service_name = #{serviceName}  
+	    </if>
+  	ORDER BY 
+          r.scheduler_id DESC
+   </select>
+    <select id="getCrawlerSchedulerList_COUNT" parameterType="SchedulerCriteria" resultType="java.lang.Integer" >
+    SELECT count(*)
+    FROM 
+          crawler_scheduler r
+    WHERE 1 = 1
+    	<if test="serviceName != null">  
+	        AND r.service_name = #{serviceName}  
+	    </if>
+  	ORDER BY 
+          r.scheduler_id DESC
+   </select>
+   <select id="getCrawlerSchedulerById" parameterType="Scheduler" resultMap="crawlerSchedulerResultMap">
+    SELECT   
+          r.scheduler_id,
+          r.associate_id,
+          r.name,
+          r.start_time,
+          r.end_time,
+          r.status,
+          r.service_name,
+          r.expression,
+          r.week,
+          r.hour,
+          r.minute,
+          r.second
+    FROM 
+          crawler_scheduler r
+  	WHERE
+          r.scheduler_id = #{schedulerId}
+   </select>
+   
+   <insert id="insertCrawlerScheduler" parameterType="Scheduler"   useGeneratedKeys="true" keyProperty="schedulerId">
+    INSERT INTO crawler_scheduler
+      (associate_id, name, start_time, end_time, status, service_name, expression, week, hour, minute, second)
+    VALUES
+      (#{associateId}, #{name}, #{startTime}, #{endTime}, #{status}, #{serviceName}, #{expression}, #{week}, #{hour}, #{minute}, #{second})
+  </insert>
+  
+  <update id="updateCrawlerScheduler" parameterType="Scheduler">
+    UPDATE crawler_scheduler
+           <trim prefix="SET" suffixOverrides=",">  
+           		<if test="associateId != null and associateId != '' ">  
+		            associate_id = #{associateId}, 
+		        </if> 
+           		<if test="name != null and name != ''">  
+		            name = #{name}, 
+		        </if>
+		        <if test="startTime != null and startTime != ''">  
+		            start_time = #{startTime}, 
+		        </if>
+		        <if test="endTime != null and endTime != ''">  
+		            end_time = #{endTime}, 
+		        </if>
+		        <if test="status != null and status != ''">  
+		            status = #{status}, 
+		        </if>
+		        <if test="serviceName != null and serviceName != ''">  
+		            service_name = #{serviceName}, 
+		        </if>
+		        <if test="expression != null and expression != ''">  
+		            expression = #{expression}, 
+		        </if>
+		        <if test="week != null and week != ''">  
+		            week = #{week}, 
+		        </if>
+		        <if test="hour != null and hour != ''">  
+		            hour = #{hour}, 
+		        </if>
+		        <if test="minute != null and minute != ''">  
+		            minute = #{minute}, 
+		        </if>
+		        <if test="second != null and second != ''">  
+		            second = #{second}, 
+		        </if>
+            </trim>
+     WHERE scheduler_id = #{schedulerId}
+  </update>
+  
+  
+  <delete id="deleteCrawlerScheduler" parameterType="Scheduler">
+     DELETE FROM crawler_scheduler WHERE scheduler_id IN 
+     <foreach  collection="schedulerIdList" item="schedulerIdList" separator="," open="(" close=")">
+    	#{schedulerIdList}
+    </foreach>
+  </delete>
+</mapper>

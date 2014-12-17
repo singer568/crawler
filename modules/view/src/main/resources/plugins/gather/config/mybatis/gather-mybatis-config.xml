@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">  
+<configuration>  
+    <typeAliases>  
+        <typeAlias alias="CrawlerRule" type="com.bjm.pms.crawler.plugin.gather.domain.CrawlerRule"/>
+        <typeAlias alias="CrawlerRuleCriteria" type="com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerRuleCriteria"/>  
+        <typeAlias alias="CrawlerTask" type="com.bjm.pms.crawler.plugin.gather.domain.CrawlerTask"/>  
+        <typeAlias alias="CrawlerTaskCriteria" type="com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerTaskCriteria"/>  
+        <typeAlias alias="CrawlerContent" type="com.bjm.pms.crawler.plugin.gather.domain.CrawlerContent"/>
+        <typeAlias alias="CrawlerContentCriteria" type="com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerContentCriteria"/> 
+        <typeAlias alias="CrawlerContentComment" type="com.bjm.pms.crawler.plugin.gather.domain.CrawlerContentComment"/>
+        <typeAlias alias="CrawlerContentCommentCriteria" type="com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerContentCommentCriteria"/> 
+        <typeAlias alias="CrawlerHistory" type="com.bjm.pms.crawler.plugin.gather.domain.CrawlerHistory"/>
+        <typeAlias alias="CrawlerHistoryCriteria" type="com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerHistoryCriteria"/>
+        <typeAlias alias="CrawlerContentPagination" type="com.bjm.pms.crawler.plugin.gather.domain.CrawlerContentPagination"/>
+        <typeAlias alias="CrawlerContentPaginationCriteria" type="com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerContentPaginationCriteria"/>
+        <typeAlias alias="CrawlerContentResource" type="com.bjm.pms.crawler.plugin.gather.domain.CrawlerContentResource"/>
+        <typeAlias alias="CrawlerContentResourceCriteria" type="com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerContentResourceCriteria"/>
+        <typeAlias alias="CrawlerDataBase" type="com.bjm.pms.crawler.plugin.gather.domain.CrawlerDataBase"/>
+        <typeAlias alias="CrawlerDataBaseCriteria" type="com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerDataBaseCriteria"/>
+        <typeAlias alias="CrawlerExtendField" type="com.bjm.pms.crawler.plugin.gather.domain.CrawlerExtendField"/>
+        <typeAlias alias="CrawlerExtendFieldCriteria" type="com.bjm.pms.crawler.plugin.gather.service.beans.CrawlerExtendFieldCriteria"/>
+    </typeAliases>  
+    <mappers>  
+        <mapper resource="plugins/gather/config/mybatis/CrawlerRuleMapper.xml" />  
+        <mapper resource="plugins/gather/config/mybatis/CrawlerTaskMapper.xml" />
+        <mapper resource="plugins/gather/config/mybatis/CrawlerContentMapper.xml" />
+        <mapper resource="plugins/gather/config/mybatis/CrawlerContentCommentMapper.xml" />
+        <mapper resource="plugins/gather/config/mybatis/CrawlerHistoryMapper.xml" />
+        <mapper resource="plugins/gather/config/mybatis/CrawlerContentPaginationMapper.xml" />   
+        <mapper resource="plugins/gather/config/mybatis/CrawlerContentResourceMapper.xml" />
+        <mapper resource="plugins/gather/config/mybatis/CrawlerExtendFieldMapper.xml" />   
+        <mapper resource="plugins/gather/config/mybatis/CrawlerDataBaseMapper.xml" /> 
+    </mappers>  
+</configuration>  

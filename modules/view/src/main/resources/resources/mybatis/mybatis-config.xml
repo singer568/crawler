@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">  
+<configuration>  
+    <typeAliases>  
+        <typeAlias alias="CrawlerConfig" type="com.bjm.pms.crawler.plugin.core.domain.CrawlerConfig"/>
+        <typeAlias alias="CrawlerConfigCriteria" type="com.bjm.pms.crawler.plugin.core.service.beans.CrawlerConfigCriteria"/>
+    </typeAliases>  
+    <mappers>  
+        <mapper resource="resources/mybatis/CrawlerConfigMapper.xml" />
+    </mappers>  
+</configuration>  
